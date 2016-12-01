@@ -1,2 +1,2 @@
-# kevinsoo.github.io
+# kevinswx
 Kevin's academic page
