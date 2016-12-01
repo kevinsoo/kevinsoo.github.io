@@ -1,2 +1,2 @@
-# kevinswx
+# kevinsoo
 Kevin's academic page
