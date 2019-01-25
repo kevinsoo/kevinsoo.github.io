@@ -1,10 +1,3 @@
----
-title: "Data visualization in R"
-author: "Cory Derringer & Kevin Soo"
-date: "January 30, 2019"
-output: html_document
----
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -31,9 +24,36 @@ That code prints the head of the pre-loaded `mpg` dataset, which we will be usin
 
 Datasets in this format are called *tidy* datasets. You can read more about this and methods for handling/manipulating data at <https://r4ds.had.co.nz/>.
 
+## Plotting a single variable with a histogram
+
+The `mpg` dataset contains data of 234 different cars. First we'll get a look at the distribution of the `mpg` variable in a histogram.
+
+```{r histogram}
+# Standard ggplot call, specifies data and then maps variables to different 'aesthetics' (x, y, etc.)
+# ggplot(data = mpg, aes(x = hwy))
+
+# Using tidyverse, we can 'pipe' data into ggplot2 with '%>%'
+# This is equivalent to the call above, but is preferable because we can perform operations on the data before plotting
+mpg %>%
+    ggplot(aes(x = hwy)) +
+    geom_histogram()
+```
+
+Now we have an idea of what this distribution looks like. Let's build on this a bit. 
+
+1. We have a warning here from ggplot. Why? How should we fix it?
+2. Does our distribution look strange at all? What's happening here?
+3. What's the best way to get a better look at what's happening?
+
+```{r histogramBuild}
+mpg %>%
+    ggplot(aes(x = hwy)) +
+    geom_histogram()
+```
+
 ## Creating scatterplots from data
 
-The `mpg` dataset contains data of 234 different cars. We'll plot the relationship between engine displacement in litres (`disp`) and highway mileage (`hwy`).
+Next we'll plot the relationship between engine displacement in litres (`disp`) and highway mileage (`hwy`).
 
 ```{r scatterplot}
 # Standard ggplot call, specifies data and then maps variables to different 'aesthetics' (x, y, etc.)
