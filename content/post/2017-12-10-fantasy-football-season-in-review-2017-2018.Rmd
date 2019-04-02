@@ -1,0 +1,416 @@
+---
+title: Fantasy Football season in review (2017-2018)
+author: Kevin Soo
+date: '2017-12-10'
+slug: fantasy-football-season-in-review-2017-2018
+categories:
+  - R
+tags:
+  - sports
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# load libraries
+library(tidyverse)
+library(ggthemes)
+library(cowplot)
+library(DT)
+
+# load data and set types
+ff <- read_csv(file="files/fantasy-football-season-in-review-2017-2018/KoerberWorld2017.csv")
+ff$Points <- as.numeric(ff$Points)
+ff$Team <- as.factor(ff$Team)
+ff$Player <- factor(ff$Player, levels = c("QB", "WR", "RB", "TE", "K", "DEF"))
+```
+
+This season, a friend invited me to join his family's Fantasy Football league, which gave me a chance to dabble in analytics. Prior to this season, I've been more interested in American Football [the band](https://americanfootball.bandcamp.com/) than the sport. 
+
+I know people who make fantasy football decisions for non-rational reasons (e.g. choosing players out of loyalty). On the other hand, I also know those who use their intimate knowledge of the sport to take into account relevant information a novice like me might overlook (e.g. how rainy weather affects the passing game, how rookies tend to perform in new teams). 
+
+My goal was to see if I could use analytics to compensate for my lack of football knowledge when making fantasy football decisions. Instead of relying on the [Yahoo! league](https://football.fantasysports.yahoo.com/) projections and personal affinities for players to make lineup decisions, I used the [Fantasy Football Analytics](https://github.com/dadrivr/FantasyFootballAnalyticsR) R package to compute player projections based on a weighted average of different analysts, hopefully giving me better access to the [wisdom of the crowd](https://en.wikipedia.org/wiki/Wisdom_of_the_crowd).
+
+This led me to draft some players that my friends and family hate. But I'm a winner, and I trust statistics over emotional attachment, so I'll go with Rob Gronkowski every time (except his bye-week).
+
+## Season overview
+
+My team, **Soccer Team**, was average, finishing 6th out of 12 teams with a 7-6-0 record. The first graph shows how each team's position changed during each week of the season. The win-loss-tie record ignores how big or small the margins of victory were, so a better metric of performance is the *proportion of points* won each game (a team wins if they get more points than their opponent -- i.e. more than 50% of the points within a game). The second graph plots the proportion of points won by each team for each week of the season.
+
+```{r standings, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.width=10, fig.height=7}
+# Calculate standings by week
+standings <- ff %>% filter(Start == 1) %>%
+    na.omit() %>%
+    group_by(Week, Game, Team) %>%
+    summarise(PtsFor = sum(Points), PtsProjected = sum(Projection)) %>%
+    mutate(Overall = c(sum(PtsFor), sum(PtsFor)), 
+           PointProportion = PtsFor/Overall,
+           PtsAgainst = (1-PointProportion)*Overall,
+           ActProj = PtsFor - PtsProjected,
+           ActProjCategory = ifelse(ActProj<0, -1, 1), # -1 if underperform, else 1
+           W = ifelse(PointProportion > .5, 1, 0),
+           L = ifelse(PointProportion < .5, 1, 0),
+           T = ifelse(PointProportion == .5, 1, 0),
+           Outcome = ifelse(W==1, "Win",
+                            ifelse(L==1, "Lose", "Tie"))) %>%
+    arrange(Team, Week) %>%
+    group_by(Team) %>%
+    mutate(Win = cumsum(W), Lose = cumsum(L), Tie = cumsum(T),
+           PointsFor = cumsum(PtsFor),
+           PointsAgainst = cumsum(PtsAgainst),
+           PointsProjected = cumsum(PtsProjected),
+           ActualProjected = cumsum(ActProj)) %>%
+    arrange(Week, -Win, Lose, -PointsFor, PointsAgainst) %>%
+    group_by(Week) %>%
+    mutate(Position = c(1:12),
+           me = ifelse(Team == "Soccer Team", 1, 0),
+           label = ifelse(Week == max(ff$Week), as.character(Team), 
+                          ifelse(Week == 1, as.character(Team), NA))) %>%
+    select(Week, Game, Position, Team, 
+           PtsProjected, PtsFor, ActProj, ActProjCategory, PtsAgainst, PointProportion, 
+           W, L, T, 
+           PointsProjected, PointsFor, ActualProjected, PointsAgainst, 
+           Win, Lose, Tie, Outcome,
+           me, label)
+standings$me <- factor(standings$me)
+standings$Outcome <- factor(standings$Outcome, levels = c("Win", "Lose", "Tie"))
+
+# Calculate current overall standings
+overall <- standings %>% ungroup() %>%
+    filter(Week == max(ff$Week)) %>%
+    select(Position, Team, Win, Lose, Tie, PointsFor, PointsProjected, ActualProjected, PointsAgainst, me)
+    
+# Reorder teams by overall position in standings
+standings$Team <- factor(standings$Team, levels = overall$Team)
+standings$label <- factor(standings$label, levels = overall$Team)
+    
+# Plot standings by week
+p1 <- standings %>%
+    ggplot(aes(x = Week, y = Position)) +
+    # geom_path(aes(color = me, group = Team)) +
+    # geom_point(aes(color = me)) +
+    geom_path(aes(color = Team, group = Team)) +
+    geom_point(aes(color = Team)) +
+    geom_label(aes(label = label, color = Team), size = 2.2) +
+    theme_minimal() +
+    scale_y_reverse(breaks = c(1:12), minor_breaks = 0) +
+    scale_x_continuous(breaks = c(1:max(ff$Week)), minor_breaks = 0) +
+    # scale_color_manual(values = c("grey60", "black")) +
+    scale_color_ptol() +
+    theme(legend.position="none") +
+    labs(title = "Standings by week",
+         subtitle = "Teams ordered by final position",
+         y = "Position")
+    
+# Plot
+p2 <- standings %>% 
+    ggplot(aes(x = Week, y = PointProportion)) +
+    facet_wrap(~ Team, ncol = 6) +
+    geom_hline(yintercept = .5, linetype = "dashed") +
+    # geom_path(aes(color = me), alpha = 1) +
+    # geom_point(aes(color = me)) +
+    geom_path(aes(color = Team, group = Team)) +
+    geom_point(aes(color = Team)) +
+    theme_minimal() +
+    scale_x_continuous(minor_breaks = 0) +
+    # scale_color_manual(values = c("grey60", "black")) +
+    scale_color_ptol() +
+    theme(legend.position="none") +
+    labs(title = "Proportion of points won by week", 
+         subtitle = "Teams ordered by final position",
+         y = "Proportion of points")
+
+plot_grid(p1, p2, nrow = 2, rel_heights = c(.9, 1))
+```
+
+## Actual vs. projected points, winning vs. losing
+
+On average, more skilled managers will have better win-loss records because they're better at identifying players who will yield more points each game. However, win-loss records are imperfect indicators of skill because they are also tied to the strength of one's opponent.
+
+Most leagues provide point projections for individual players, which serve as a baseline for performance. Your team is performing well if it meets or exceeds the projections from the league, and underperforming if it fails to meet the projections. The following graph plots the projected vs. actual total points for each game by each manager. The points above the dashed line indicate that the team beat its total projection for that week. The color of the points indicate the outcome of that game.
+
+```{r projectedActualTotal, echo=FALSE, message=FALSE, fig.align="center", fig.width=10}
+# Plot projected vs. actual points for all players
+ff$Team <- factor(ff$Team, levels = overall$Team)
+
+# Plot projected vs. actual points with outcome
+ggplot(data = standings, aes(x = PtsProjected, y = PtsFor)) +
+    facet_wrap(~ Team, ncol = 6) +
+    geom_abline(slope = 1, linetype = "dashed") +
+    geom_point(aes(color = Outcome), alpha = 1) +
+    theme_minimal() +
+    scale_color_manual(values = c("green4", "red", "gold")) +
+    # scale_x_continuous(limits = c(40, 150)) +
+    # scale_y_continuous(limits = c(40, 150)) +
+    # theme(legend.position="none") +
+    labs(title = "Actual vs. projected total points", 
+         subtitle = "Data above dashed line indicate actual points > projection",
+         x = "Projected points", 
+         y = "Actual points")
+```
+
+Generally, you are likelier to win if you beat your points projection. However, the outcome is also determined by your opponent. For example, you might have an exceptional day and beat your projection by 15 points, but your opponent might start out with a +20 point spread and still win despite falling short of their projection by 3 points.
+
+Which managers were best at translating good performances (beating their projections) into wins? Matchups seemed pretty fair for a team like Demo Demolishers: they won every time they beat their projection, and lost every time they fell short of their projection. Tungahoo had pretty favorable circumstances (usually starting out with really high projections), racking up 4 wins even when underperforming. In contrast, TheBusters were pretty unlucky to record 3 losses even when beating their projections.
+
+The following table displays each team's win-loss percentage (ignoring ties) when it underperformed (actual points < projected points) or overperformed (meeting or exceeding its projection). Sort the table to see which teams had the best or worst win-loss records when under- vs. overperforming. TheBusters and Justin's Team were pretty unlucky, only winning half of the matchups in which they overperformed. However, TheBusters also benefited from some good luck when underperforming, winning 70% of those games.
+
+#### Winning percentage when over- vs. underperforming
+
+```{r lucky, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", fig.width=5}
+table1 <- standings %>% 
+    mutate(Class = paste(as.character(ActProjCategory), as.character(Outcome), sep="")) %>% 
+    group_by(Team, Class) %>% count() %>%
+    complete(Class, fill = list(0)) %>%
+    spread(Class, n) %>%
+    rename(`UnderPerf (L)` = `-1Lose`,
+           `UnderPerf (W)` = `-1Win`,
+           `OverPerf (L)` = `1Lose`,
+           `OverPerf (W)` = `1Win`) %>%
+    mutate(`UnderPerf (L)` = ifelse(is.na(`UnderPerf (L)`), 0, `UnderPerf (L)`),
+           `UnderPerf (W)` = ifelse(is.na(`UnderPerf (W)`), 0, `UnderPerf (W)`),
+           `OverPerf (L)` = ifelse(is.na(`OverPerf (L)`), 0, `OverPerf (L)`),
+           `OverPerf (W)` = ifelse(is.na(`OverPerf (W)`), 0, `OverPerf (W)`)) %>%
+    mutate(`UnderPerf (W%)` = round(`UnderPerf (W)`/(`UnderPerf (W)`+`UnderPerf (L)`), 2),
+           `OverPerf (W%)` = round(`OverPerf (W)`/(`OverPerf (W)`+`OverPerf (L)`), 2)) %>%
+    # select(Team, 
+    #        `OverPerf (W)`, `OverPerf (L)`, `OverPerf (W%)`, `UnderPerf (W)`, `UnderPerf (L)`, `UnderPerf (W%)`)
+    select(Team, 
+           `OverPerf (W%)`, `UnderPerf (W%)`) %>%
+    rename(`Overperform (W%)` = `OverPerf (W%)`,
+           `Underperform (W%)` = `UnderPerf (W%)`)
+
+datatable(table1, options = list(pageLength = 12, dom = 't'))
+```
+
+## Player projections
+
+Since a manager's role involves selecting players, let's zoom in to analyzing how individual players performed. Think of a manager's *skill* as their ability to choose players who will maximize points over what's expected. This expectation is shaped by each player's projected points going into a game, so we'll measure skill using the difference between the actual and projected points. Using the difference in points also accounts for factors beyond a manager's control like injuries. 
+
+The following graphs plot each team's distribution of actual and projected points for each starting player (for all regular season games). The colored lines indicate the relationship between players' actual and projected points. Lines steeper than the dashed lines indicate that on average, players' actual points > projected points, resulting in regression coefficients > 1. 
+
+```{r projectedActual, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", fig.width=8}
+# Plot projected vs. actual points for all players
+ff$Team <- factor(ff$Team, levels = overall$Team)
+
+# Plot projected vs. actual points with outcome
+ff %>% filter(Start==1) %>%
+    mutate(Difference = Points - Projection) %>% 
+    ggplot(aes(x = Projection, y = Points)) +
+    facet_wrap(~ Team, ncol = 6) +
+    geom_point(aes(color = Team), alpha = .3) +
+    geom_abline(slope = 1, linetype = "dashed") +
+    geom_smooth(aes(group = Team, color = Team), method = "lm") +
+    theme_minimal() +
+    scale_color_ptol() +
+    # scale_x_continuous(limits = c(40, 150)) +
+    # scale_y_continuous(limits = c(40, 150)) +
+    theme(legend.position="none") +
+    labs(title = "Actual vs. projected total points for all starting players", 
+         subtitle = "Data above dashed line indicate player's actual points > projection",
+         x = "Projected points", 
+         y = "Actual points")
+
+# table1 <- ff %>% 
+#     filter(Start==1) %>% 
+#     group_by(Team) %>% 
+#     mutate(B = lm(Points ~ Projection)$coefficient[2]) %>% 
+#     distinct(B) %>% arrange(-B)
+```
+
+Most managers chose players who (on average) fell slightly short of their projected points, except for Ken'nNat (*B* = 1.24) and Justin's Team (*B* = 1.20). This analysis shows that it's pretty hard to beat the projections by identifying the right players to start, and few managers do so reliably. This is mainly because on average, most players fall short of their Yahoo! league projections. The ultimate question for a manager: Can we identify players who are likelier to beat their projections, or at least minimize how far they fall short of them?
+
+## Points by position
+
+Players in some positions tend to do better than those in other positions. This is reflected in the projected points (e.g. top-tier QBs tend to get projections close to 20 points or more), but the higher the projection, the more likely a player is to [fall short](https://en.wikipedia.org/wiki/Regression_toward_the_mean) of it. Because of this, it's worth asking: Are players in some positions more reliable than others in meeting their projections? The following graph plots the projected vs. actual points for all players in our league (both starters and non-starters) by position.
+
+```{r positions, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center"}
+ff %>% 
+    na.omit() %>%
+    filter(Projection != 0) %>%
+    ggplot(aes(x = Projection, y = Points)) +
+    facet_wrap(~ Player, ncol = 3) +
+    geom_point(alpha = .3) +
+    geom_abline(slope = 1, linetype = "dashed") +
+    geom_smooth(aes(group = Player), color = "red", method = "lm") +
+    theme_minimal() +
+    # scale_color_ptol() +
+    # scale_x_continuous(limits = c(40, 150)) +
+    # scale_y_continuous(limits = c(40, 150)) +
+    theme(legend.position="none") +
+    labs(title = "Actual vs. projected total points by position", 
+         subtitle = "Data above dashed line indicate player's actual points > projection",
+         x = "Projected points", 
+         y = "Actual points")
+
+# ff %>% 
+#     na.omit() %>%
+#     filter(Projection != 0) %>%
+#     group_by(Player) %>% 
+#     mutate(B = lm(Points ~ Projection)$coefficient[2]) %>%
+#     distinct(Player, B)
+```
+
+Running backs (RB) are the likeliest players to meet their projections: the regression coefficient capturing the relationships between their actual and projected points are *B* = .88, and this relationship is pretty strong (partial-*R*^2^ = .151). Kickers (K) have a similar relationship, *B* = 1.03, although this relationship is pretty noisy; partial-*R*^2^ = .059. Other positions tend to underperform their projected points. Quarterbacks (QB) have a particularly tenuous relationship with their projected points (*B* = .29, partial-*R*^2^ = .013), but choosing wide receivers (WR, *B* = .63, partial-*R*^2^ = .052), tight-ends (TE, *B* = .69, partial-*R*^2^ = .075), and defenses (DEF, *B* = .64, partial-*R*^2^ = .039) are also exercises in finding the rare players who won't underperform.
+
+Did players of differing positions perform differently across teams? The following table displays the ratio of actual to projected points for starters in different positions by team. Ratios > 1 mean that a team's players in that position tended to outperform their projections. Sort the table by each position to see which team owned which position.
+
+#### Ratio of actual to projected points by position and team
+
+```{r positionsTable, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", fig.width=5}
+table2 <- ff %>% 
+    na.omit() %>%
+    filter(Start==1, Projection!=0) %>% 
+    mutate(Difference = Points/Projection) %>%
+    group_by(Team, Player) %>% 
+    mutate(`Actual vs. projected` = round(mean(Difference), 3)) %>%
+    distinct(`Actual vs. projected`) %>%
+    spread(Player, `Actual vs. projected`)
+
+datatable(table2, options = list(pageLength = 12, dom = 't'))
+```
+
+## Sit-start decisions
+
+It's awful when a starting player fails to meet his projection. It's even worse when you started him in place of another player who has a breakout game. In Week 10, I sat Dion Lewis (21 points) and started Alfred Morris (5 points) because of Ezekiel Elliot's suspension. I dropped Alfred Morris the next week, and he then exploded for 20 points. It'll take awhile for me to trust a Cowboy again.
+
+The best managers should have a better than average ability to know which players to sit and start in each position. In theory, a manager might somehow choose the lineup (1 QB, 3 WRs, 2 RBs, 1 TE, 1 K, 1 DEF) that yields the optimum number of points such that switching any starter with a bench player would have led to fewer points. In reality, most teams could have scored better if they had made a few different sit-start decisions. The following graph shows each team's *sit-start efficiency*: the point differential between the actual lineup and the optimal lineup, as well as the number of sit-start decisions a lineup was from the optimal lineup. Large values indicate that a manager could have done much better in a game by making different sit-start decisions. 
+
+```{r sitStart, echo=FALSE, message=FALSE, warning=FALSE, fig.align="center", fig.width=8}
+# compute optimal lineup
+qb <- ff %>% 
+    filter(Player=="QB") %>%
+    group_by(Team, Game, Week) %>% arrange(-Points) %>% slice(1:1)
+wr <- ff %>% 
+    filter(Player=="WR") %>%
+    group_by(Team, Game, Week) %>% arrange(-Points) %>% slice(1:3)
+rb <- ff %>% 
+    filter(Player=="RB") %>%
+    group_by(Team, Game, Week) %>% arrange(-Points) %>% slice(1:2)
+te <- ff %>% 
+    filter(Player=="TE") %>%
+    group_by(Team, Game, Week) %>% arrange(-Points) %>% slice(1:1)
+k <- ff %>% 
+    filter(Player=="K") %>%
+    group_by(Team, Game, Week) %>% arrange(-Points) %>% slice(1:1)
+def <- ff %>% 
+    filter(Player=="DEF") %>%
+    group_by(Team, Game, Week) %>% arrange(-Points) %>% slice(1:1)
+optimal <- bind_rows(qb, wr, rb, te, k, def) %>%
+    replace_na(list(Points = 0)) %>%
+    mutate(Change = ifelse(Start==0, 1, 0)) %>%
+    summarise(Optimal = sum(Points), Changes = sum(Change)) %>%
+    arrange(Week, Game, Team)
+
+# combine with standings
+sitStart <- standings %>% select(Week, Game, Team, PtsFor, PtsAgainst, PointProportion, W, L) %>%
+    inner_join(optimal) %>% as_tibble() %>%
+    mutate(Difference = PtsFor - Optimal) %>%
+    group_by(Team) %>%
+    mutate(Average = mean(Difference))
+
+# plot
+sitStart %>%
+    ggplot(aes(x = Changes, y = Difference)) +
+    facet_wrap(~ Team, ncol = 6) +
+    geom_jitter(aes(color = Team), alpha = .6) +
+    geom_hline(aes(yintercept = Average), linetype = "dashed") +
+    scale_color_ptol() +
+    theme_minimal() +
+    theme(legend.position="none") +
+    labs(title = "Sit-start efficiency by team", 
+         subtitle = "Dashed line indicates team's average sit-start efficiency",
+         x = "Number of sit-start decisions from optimal lineup", 
+         y = "Sit-start efficiency")
+
+```
+
+Optimal lineups (a maximum sit-start efficiency of 0) were achieved 20 times. SteaGles managed this the most times (4), which is some consolation since they finished in 11th place. SteaGles also had the best average efficiency of -7.15 points, implying they're pretty good at team selection but perhaps got really unlucky with the players they drafted. TheBusters had the the worst average efficiency (-20 points), suggesting that of all teams, they really should not be trusting their current selection process. (This is my best attempt at statistically-informed trash talk).
+
+How would the season have panned out if each team had made optimal sit-start decisions? Because these counterfactual questions depend on multiple factors, we'll limit our hypothetical to each team making optimal sit-start decisions while their opponents' lineups remain unchanged. The following table displays the counterfactual standings given optimal sit-start conditions. For comparison, the table below that shows the actual standings.
+
+#### Counterfactual standings with maximum sit-start efficiency
+
+```{r whatIf, echo=FALSE, message=FALSE, fig.align="center"}
+whatIf <- sitStart %>%
+    select(Week, Game, Team, PtsFor, PtsAgainst, PointProportion, Optimal) %>%
+    mutate(W = ifelse(PointProportion > .5, 1, 0),
+           L = ifelse(PointProportion < .5, 1, 0),
+           T = ifelse(PointProportion == .5, 1, 0),
+           Outcome = ifelse(W==1, "Win",
+                            ifelse(L==1, "Lose", "Tie")),
+           WhatIfPointProportion = Optimal/(Optimal + PtsAgainst),
+           W.if = ifelse(WhatIfPointProportion > .5, 1, 0),
+           L.if = ifelse(WhatIfPointProportion < .5, 1, 0),
+           T.if = ifelse(WhatIfPointProportion == .5, 1, 0),
+           Outcome.if = ifelse(W==1, "Win",
+                            ifelse(L==1, "Lose", "Tie"))) %>%
+    arrange(Team, Week) %>%
+    group_by(Team) %>%
+    mutate(Win = cumsum(W), Lose = cumsum(L), Tie = cumsum(T),
+           PointsFor = cumsum(PtsFor),
+           PointsAgainst = cumsum(PtsAgainst),
+           Win.if = cumsum(W.if), Lose.if = cumsum(L.if), Tie.if = cumsum(T.if),
+           PointsOptimal = cumsum(Optimal),
+           PointsProportionAverage = round(mean(PointProportion), 2),
+           PointsProportionOptimalAverage = round(mean(WhatIfPointProportion), 2)) %>%
+    arrange(Week, -Win, Lose, -PointsFor, PointsAgainst) %>%
+    group_by(Week) %>%
+    mutate(Position = c(1:12),
+           label = ifelse(Week == max(ff$Week), as.character(Team), NA)) %>%
+    select(Week, Game, Position, Team,
+           PtsFor, PointProportion, 
+           W, L, T,
+           Optimal, WhatIfPointProportion,
+           W.if, L.if, T.if,
+           PointsFor, PointsAgainst, PointsOptimal,
+           PointsProportionAverage, PointsProportionOptimalAverage,
+           Win, Lose, Tie, Outcome,
+           Win.if, Lose.if, Tie.if, Outcome.if,
+           label) %>%
+    ungroup() %>%
+    mutate(ActualOptimal = PtsFor - Optimal) %>%
+    group_by(Team) %>%
+    mutate(AverageEfficiency = round(mean(ActualOptimal),2))
+
+# Calculate current overall standings
+overall <- whatIf %>% ungroup() %>%
+    filter(Week == max(ff$Week)) %>%
+    select(Position, Team, PointsOptimal, Win.if, Lose.if, Tie.if) %>%
+    arrange(-Win.if, Lose.if, -PointsOptimal) %>%
+    mutate(OptimalPosition = c(1:12)) %>%
+    arrange(Position) %>%
+    select(Team, PointsOptimal:OptimalPosition) %>%
+    rename(`Points` = PointsOptimal,
+           `Win` = Win.if,
+           `Lose` = Lose.if,
+           `Tie` = Tie.if,
+           `Position` = OptimalPosition)
+
+datatable(overall, options = list(pageLength = 12, dom = 't'))
+```
+
+#### Actual standings
+```{r whatIs, echo=FALSE, message=FALSE, fig.align="center"}
+# Calculate current overall standings
+overall <- whatIf %>% ungroup() %>%
+    filter(Week == max(ff$Week)) %>%
+    select(Position, Team, PointsFor, Win, Lose, Tie) %>%
+    arrange(-Win, Lose, -PointsFor) %>%
+    mutate(Position = c(1:12)) %>%
+    arrange(Position) %>%
+    select(Team, PointsFor:Tie, Position) %>%
+    rename(Points = PointsFor)
+
+datatable(overall, options = list(pageLength = 12, dom = 't'))
+```
+
+With maximum sit-start efficiency, Demo Demolishers would have jumped from 8th to 4th place, while Ken'nNat would have dropped from 4th to 8th. Most other teams' positions would not have changed all that much.
+
+## Conclusion
+
+Fantasy Football is a delightfully weird world, but it successfully got me interested in a new sport. I love the weird hopes it can lead to: "I hate the Ravens, but I started their kicker so I hope the Steelers' defense forces field goals at around 45 yards, because field goals from that distance are worth more points. But my opponent also started the Steelers defense, so I need the Ravens to score a lot, just not through Alex Collins, who is my opponent's starting RB." True story, that's how I got eliminated in the playoffs.
+
+It's also led to my wife questioning my Pittsburgh credentials, since I've played around with a few Ravens and Patriots in my lineup. Rob Gronkowski was one of my top players, and I even started Joe Flacco one week. My wife was outraged to find out about that one.
+
+My experiment in analytics didn't yield the success I hoped. This is probably because selecting players in fantasy football is an inherently noisy endeavor. Call it sour grapes, but I maintain that another reason is that I lost David Johnson (1st overall pick) and Allen Robinson (my 4th round pick) to injury in Week 1, so I was constantly playing catch-up. I'm not ready to abandon this experiment yet, but it'll have to wait for next year!

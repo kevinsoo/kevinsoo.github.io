@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Casual Inference</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Casual Inference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>General</title>
+      <link>/tags/general/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Malaysia</title>
+      <link>/tags/malaysia/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/malaysia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Outdoors</title>
+      <link>/tags/outdoors/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/outdoors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Politics</title>
+      <link>/tags/politics/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/politics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social Science</title>
+      <link>/tags/social-science/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/social-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sports</title>
+      <link>/tags/sports/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sports/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Analysis</title>
+      <link>/tags/text-analysis/</link>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/text-analysis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

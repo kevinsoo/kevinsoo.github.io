@@ -1,0 +1,87 @@
+---
+title: The world (is going up in flames)
+author: Kevin Soo
+date: '2018-02-11'
+slug: the-world-is-going-up-in-flames
+categories:
+  - R
+tags:
+  - politics
+  - social science
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p><a href="https://www.youtube.com/watch?v=moiUyFQQE-0">This song</a> by the late, great Charles Bradley had me wondering: Is the world getting more peaceful, or is it increasingly conflict-ridden? Are there changes in the types of conflicts that flare up today compared to the past? These questions led me to explore the <a href="http://www.clinecenter.illinois.edu/data/event/speed/">Social, Political and Economic Event Database (SPEED)</a>, which contains instances of unrest between 1946 and 2005 (post-WW2). The dataset records 62,141 instances of conflict, with information about time, initiators, targets, sources, and many other interesting variables related to the conflicts.</p>
+<p>SPEED distinguishes between several types of events:</p>
+<ol style="list-style-type: decimal">
+<li><em>Disruptive state acts</em>. Acts by governments or government agents that disrupt normal societal processes or human interactions. These can include extraordinary acts, the ordinary performance of repressive state tasks, or the failure of government to perform routine duties.</li>
+<li><em>Political attacks</em>. Actions that injure people or damage property, done for political reasons. These exclude garden-variety criminal acts and acts of war, but include atrocities committed against non-combatants (e.g. rape, mass executions).</li>
+<li><em>Political expression</em>. When non-state actors publicly articulate messages that are considered threatening or unwelcome by some others. These can encompass a range of issues, from protesting economic or political conditions, to matters concerning the behavior of individuals (e.g. sexual assault).</li>
+<li><em>Political reconfigurations</em>. Changes in high-level government or national constitutions. These can include failed power transitions (e.g. an unsuccessful coup d’état).</li>
+</ol>
+<p>The following graph displays the number of new conflicts of each type that occur each year. Through all the years encompassed by the dataset, <em>political reconfigurations</em> occur at a low rate. The other three types of conflict occur at a much higher rate, but seem to vary greatly by year. Over time, <em>political attacks</em> seem to have become more common in relation to other types of conflict (especially in the 1980’s and post 2000).</p>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/newConflicts-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="duration-of-conflicts" class="section level2">
+<h2>Duration of conflicts</h2>
+<p>The graph above shows only the emergence of new conflicts. However, some conflicts last longer than others. The following table shows the statistics for conflict duration by conflict type. There’s quite a bit of variability in how much each type of conflict lasts on average. There’s also a great amount of variability within each type, but this is due largely to a few conflicts that last an extremely long time (see “Maximum” column).</p>
+<div id="duration-of-conflict-in-days-by-type-of-conflict" class="section level4">
+<h4>Duration of conflict (in days) by type of conflict</h4>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4"],["Disruptive state acts","Political attacks","Political expression","Political reconfigurations"],[141.43,123.59,45.47,81.93],[750.03,664.08,335.76,199.24],[18408,17060,17639,1826]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Type<\/th>\n      <th>Mean<\/th>\n      <th>SD<\/th>\n      <th>Maximum<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p>To get a better picture of the duration profile for each type of conflict, I visualized the distribution of durations for all conflicts that lasted 40 days or less (about 17% of the dataset). From this graph, a few things are apparent:</p>
+<ol style="list-style-type: decimal">
+<li>Most conflicts last only one or two days.</li>
+<li><em>Disruptive state acts</em> and <em>political attacks</em> have similar profiles. Most conflicts last only a day or two, but there are also small clusters that last around a week and a month long. This suggests there are different sub-types of conflict within each of these types that play out at differing rates.</li>
+<li><em>Political expression</em> conflicts have durations that are more spread out – there are a few conflicts that last any number of days, especially from two to nine days – in addition to a small group lasting about a month.</li>
+<li><em>Political reconfiguration</em> conflicts display a bimodal distribution; they all last either less than a week, or around a month.</li>
+</ol>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/duration-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="conflict-across-the-globe" class="section level2">
+<h2>Conflict across the globe</h2>
+<p>Where do these conflicts occur? The following graph displays the regions that each type of conflict occurred in over time. The counts are computed for every 5-year window, for viewing ease. Consistent with the prior graph, <em>political reconfigurations</em> occur at a low rate across all regions. The remaining three types of conflict reveal differences between regions. A few patterns emerge:</p>
+<ol style="list-style-type: decimal">
+<li>Oceania had very few conflicts of any kind. Northern Africa also had relatively few conflicts, except for a rise in <em>political attacks</em> prior to 1960.</li>
+<li>The three types of conflicts in North America peaked around the 1970’s, then declined.</li>
+<li>From 2000, conflicts appear to be decreasing in most regions, except for the Middle East. This is especially true when it comes to <em>political attacks</em>. In fact, the overall rise in these types of attacks (see prior graph) seems to stem almost entirely from the dramatic increase in such conflict in the Middle East.</li>
+<li>Aside from the Middle East, the most conflicts tend to occur in Asia, Europe, and Southern Africa.</li>
+</ol>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/regions-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+<div id="victims-of-conflict" class="section level2">
+<h2>Victims of conflict</h2>
+<p>Different conflicts result in different numbers and types of victims. There is large variability in the number of victims (some conflicts are really wars that have affected thousands), so I focused on conflicts with 5,000 of fewer victims. The following graph plots the number of victims who were injured vs. killed for each conflict type.</p>
+<p>Most <em>political expression</em> and <em>political reconfiguration</em> conflicts have small numbers of victims. <em>Disruptive state acts</em> and <em>political attacks</em> display the same pattern. Most of those events have small numbers of injured and killed victims, but many have a high number of killed victims (these are probably the most extreme conflicts, for which danger is so great that it results in death more than injury). A smaller number of events have more injured than killed people.</p>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/victims-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="what-causes-conflict" class="section level2">
+<h2>What causes conflict?</h2>
+<p>SPEED also records the sources of conflict. The following graph plot the number of conflicts stemming from each source over time. Some sources of conflict are more prevalent (e.g. anti-government sentiment) than others (e.g. ecological scarcity). Over time, each source of conflict has led to consistent numbers of events, except sociocultural animosity between groups (on the rise) and class conflict (thankfully, on the wane).</p>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/sources-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>A more fine-grained look at how conflicts change over time can be obtained from plotting the change in the percentage of conflicts compared to the prior time point. The following graph shows the change in the number of new conflicts due to each source over time, and reveals that conflicts increase and decrease in a 5-10 year cycle. The data only goes up to 2005, but it will be interesting to see if this cyclic trend continues.</p>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/sources2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Different sources of conflict should lead to different types of conflicts. The following graph plots the proportion of conflicts of each type that are attributable to each source. A few things of note:</p>
+<ol style="list-style-type: decimal">
+<li><em>Disruptive state acts</em> are caused by a wide range of factors, but not typically by anti-government sentiment, presumably because the acts are carried out by the state itself. The few instances caused by anti-government sentiment are cases of inter-governmental conflict (e.g. a local government rebelling against a federal government).</li>
+<li><em>Political attacks</em> and <em>political expression</em> have the most similar causes, except that the former is driven more by sociocultural animosity.</li>
+<li><em>Political reconfigurations</em> are unique in that they caused mostly by anti-government sentiment and exerting political rights.</li>
+</ol>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/sources3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Conflicts in different regions may also have different sources. The following graph plots the proportion of conflicts in each region that are attributable to each source. There appears to be a general trade-off between anti-government sentiment and sociocultural animosity – Latin American conflict is caused most by the former and least by the latter, and this pattern is reversed for the Middle East.</p>
+<p><img src="/post/2018-02-11-the-world-is-going-up-in-flames_files/figure-html/sources4-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>These visualizations are intended to give a broad overview of the kinds of information contained in the SPEED data. More complete and complex data containing information about the specific conflicts could reveal more interesting phenomena. For example, are there different latent classes of conflicts? Are some conflicts caused by some prior conflicts? In future analyses, I’ll try to answer some of these questions, without falling into a pit of despair over the state of the world.</p>
+</div>

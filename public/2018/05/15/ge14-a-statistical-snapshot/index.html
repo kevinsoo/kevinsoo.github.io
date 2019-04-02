@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GE14: A statistical snapshot &middot; Casual Inference</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  
+  <link rel="icons8-scatter-plot-90" sizes="144x144" href="/icons8-scatter-plot-90.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Casual Inference" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/"><h1>Casual Inference</h1></a>
+      <p class="lead">
+      Adventures of a Data Scientist <a href="http://twitter.com/civisanalytics">@CivisAnalytics</a>. Occasional causal inferences.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        
+        <li><a href="/about/"> About </a></li><li><a href="/post/"> Posts </a></li><li><a href="/categories/"> Categories </a></li><li><a href="/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    
+    <div>
+        <h3 class="white">Links</h3>
+        <i class="fab fa-twitter fa-fw"></i> <a href="http://twitter.com/kevinwxsoo">Twitter</a><br>
+        <i class="fab fa-github fa-fw"></i> <a href="https://github.com/kevinsoo">GitHub</a><br>
+        <i class="far fa-envelope fa-fw"></i> <a href="mailto:kevinsoo87@gmail.com?Subject=Hello">Email</a><br>
+        <br>
+    </div>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>GE14: A statistical snapshot</h1>
+  <time datetime=2018-05-15T00:00:00Z class="post-date">Tue, May 15, 2018</time>
+  
+
+
+<p>Malaysia held its 14<sup>th</sup> General Election (GE14) on May 9, 2018. The opposition Pakatan Harapan (PH, translation: <em>Coalition of Hope</em>) won control of the federal government over Barisan Nasional (BN, translation: <em>National Front</em>). There are many reasons why this was a remarkable outcome. I don’t intend to expand on these, but here are a couple worth mentioning:</p>
+<ul>
+<li>The BN has ruled Malaysia since its independence in 1957. As a result, Malaysia’s democracy is <a href="https://www.malaymail.com/s/1045775/flawed-democracy-malaysia-slips-down-in-the-economist-units-ranking-behind">flawed</a> (e.g., through <a href="https://www.ft.com/content/ecb87f18-51d7-11e8-b3ee-41e0209208ec">gerrymandering</a>).</li>
+<li>The opposition coalition was led by a 93-year old <a href="https://www.nytimes.com/2018/05/11/world/asia/mahathir-malaysia-democracy-strongmen.html">former prime minister</a>, who exited the ruling party in 2016.</li>
+</ul>
+<p>The present write-up provides a statistical overview of the results from GE14. To do this, I scraped data from Malaysiakini’s <a href="https://undi.info/">Undi.info</a> portal of all parliament-level results from both 2018 and 2013 (the 13<sup>th</sup> General Election).</p>
+<div id="pakatans-impending-big-win" class="section level2">
+<h2>Pakatan’s (impending) big win</h2>
+<p>The graph on the left displays the total number of parliamentary seats won by BN, PH, and PAS. PH won 121 seats (8 of those belong to PH’s allies who are not formally in the coalition). A coalition needs 112 out of the 222 parliamentary seats for a simple majority (the dashed line).</p>
+<p>The graph on the right displays the total number of votes won in each contest, showing the different distributions of votes won by each coalition/party. Both BN and PAS won smaller numbers of votes in each seat they contested (medians ~ 18,000 and 12,000, respectively). In contrast, PH won many more votes in each (median ~ 25,000, with a heavy positive skew); its success can be seen in the 20-30 seats in which it won &gt; 50,000 votes, more than any single seat won by BN or PAS (except for one).</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/results-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="change-from-ge13" class="section level4">
+<h4>Change from GE13</h4>
+<p>The performance of the opposition coalitions requires some context. Back in 2008’s <a href="https://en.wikipedia.org/wiki/Malaysian_general_election,_2008">GE12</a>, the opposition (then comprising slightly different political parties, and called <em>Pakatan Rakyat</em>) made historic gains, denying BN its customary 2/3<sup>rds</sup> supermajority for the first time by winning 82 seats. The opposition further improved on their performance in 2013’s <a href="https://en.wikipedia.org/wiki/Malaysian_general_election,_2013">GE13</a>, winning the popular vote, and 89 seats vs. BN’s 122.</p>
+<p>Their jump to 113 seats in GE14 was a hugely successful performance by PH. The following graph displays the change in support from GE13 to GE14 for BN and PH. All PAS seats are coded as gains because their seats in 2013 counted for Pakatan, which they <a href="https://www.straitstimes.com/asia/se-asia/break-up-of-malaysias-opposition-bloc-pakatan-rakyat-what-happened-and-whats-next">left in 2015</a> (although a faction within PAS exited their party and remained with PH).</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/resultsChange-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Some observations:</p>
+<ul>
+<li>PAS “gained” 18 seats on its own, which is really a loss because it gained 21 seats as a part of Pakatan Rakyat in GE13. Of the seats it “gained”, a huge chunk (13) were taken from PH. PAS undoubtedly influenced the outcome by causing three-cornered contests. Their influence was felt hardest by PH.</li>
+<li><em>PH improved their margins in 75% of their contested seats</em>, picking up an amazing 32 seats from BN. In the seats it declined in, it lost 14 that it had held, mainly to PAS as a result of it leaving the coalition.</li>
+<li><em>BN decreased their margins in 87% of their contested seats</em>. It gained one, but lost an astonishing 38 seats.</li>
+</ul>
+</div>
+</div>
+<div id="turnout" class="section level2">
+<h2>Turnout</h2>
+<p>Malaysian elections typically have enviable turnout rates – 83.3% in GE13 and 80.9% in GE14. Did turnout vary amongst different groups? Back in 2013, there was a slight relationship between turnout and race – turnout was higher in constituencies with a higher percentage of ethnic-Malay voters (see the following graph on the left). This time around, turnout did not vary by race – it was pretty stable (in the low 80’s) regardless of the racial composition of each seat. In GE14, it appears different races turned out at similar rates.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/turnoutSeats-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Turnout was related to the size of constituencies (based on the number of registered voters), which has a relationship with how urbanized a constituency is. On average, larger constituencies contain more dense population centers, whih tend to be more urban. In both GE13 and GE14, larger constituencies had higher turnouts.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/turnoutSeats2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Generally, a higher turnout favors the opposition parties, and the same trend was evident in GE14. The following graph plots the share of votes received by each coalition/party by turnout (note: turnout is on the x-axis). As turnout increased, the vote-share won by BN decreased dramatically, and led to them losing more seats. On the other hand, PH won more votes and more seats as turnout increased. PAS’ performance was less related to turnout.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/turnout-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="gerrymandering" class="section level2">
+<h2>Gerrymandering</h2>
+<p>The BN ex-government bulldozed through the Election Commission’s proposed redelineation in March 2018, to the outrage of opposition lawmakers and civil society. Since <a href="https://newnaratif.com/research/malaysias-election-rigged/">much was made</a> of how the redelineation would <a href="https://www.straitstimes.com/asia/se-asia/prepare-for-chaos-after-malaysias-new-redelineation-report-is-out-sin-chew-daily">disproportionately benefit BN</a>, a practice called <a href="https://en.wikipedia.org/wiki/Gerrymandering"><em>gerrymandering</em></a>. It’s worth noting that this is a common practice in most democracies.</p>
+<p>The following graphs shows the sizes of the 50 largest and smallest constituencies. It’s visually apparent that larger constituencies tend to be won by PH, while smaller constituencies tend to be won by BN. If campaigning is viewed as a problem of figuring out how to allocate limited resources (time, money, effort) to reach potential voters, PH seems to need more resources to run a successful campaign. On the flipside, this definitely added to their popular vote victory when campaigning was successful.</p>
+<p>Another way to think about it is to consider that the number of voters in the largest constituency is about 10 times greater than the number of voters in the smallest. The work put in to win one large seat could be equivalent to the work put in to win many small constituencies.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/sizes1-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/sizes2-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>The main goal of gerrymandering is to “pack” your opponents’ supporters into only a few constituencies (so that many votes count for fewer seats) and to “crack” your own supporters into many constituencies (so fewer votes are needed to win a seat). The redelineation was “successful” for BN in this regard: BN wins its seats relying on way fewer voters on average (<em>M</em> = 18,788) than either PH (<em>M</em> = 39,004) or PAS (<em>M</em> = 34,055).</p>
+<p>The following graph displays the victory margins of seats won by each coalition/party by the number of registered voters in a constituency.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/sizeByShare-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Some observations:</p>
+<ul>
+<li>As the size of a constituency increases, BN’s victory margins decrease, resulting in them winning fewer seats. This pattern (seen in the blue lines) is present in both GE13 and GE 14.</li>
+<li>In GE13, the size of a constituency was not related to the share of votes won by the opposition (the flat red line in the left figure). The redelineation in 2018 changed this: in GE14, PH’s margin of victory increased with the size of the constituencies (red line in the right figure).</li>
+<li>This suggests the gerrymandering was “successful” for BN – more opposition-leaning voters were “packed” into larger constituencies, whereas BN-leaning voters were “cracked” into smaller ones. PH was made to work harder and spread their resources more thinly to win each seat.</li>
+</ul>
+<div id="wasted-votes" class="section level4">
+<h4>Wasted votes</h4>
+<p>We can also quantify the extent of gerrymandering in a constituency by looking at the number of <a href="https://en.wikipedia.org/wiki/Wasted_vote"><em>wasted votes</em></a> for each party that do not directly contribute to the outcome of a race (all votes for the losers + all “extra” votes for the winner). The following graph displays the number of wasted votes each coalition had in each contest.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/wastedVotes-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Some observations:</p>
+<ul>
+<li>The redelineation prior to GE14 appears to have marginally reduced the number of BN’s wasted votes; the distribution is “squashed” lower. Conversely, it seems to have boosted the number of wasted votes for PH in a few seats (the outliers with &gt; 40,000 wasted votes).</li>
+<li>Focusing on the wasted votes in GE14 (right figure), seats that BN won have significantly fewer wasted votes compared to seats that PH won. Additionally, the seats BN won have, almost without exception, fewer wasted votes than seats they lost. In contrast, for PH, their wins are distributed pretty evenly (although on average, seats PH won have more wasted votes than seats they lost).</li>
+<li>All this suggests a systematic effort to carve out constituencies that favor BN by allowing them to win efficiently. Their loss in spite of this suggests their gerrymandering was insufficient to overcome the overall drop in support for them (I’ll get to that next). For PH, the redelineation created more constituencies in which they would win by large majorities (wasting their votes), which is consistent with the analyses above.</li>
+<li>PAS in GE14 had a wasted vote distribution similar to BN, which makes sense given the shared demographics and geography of their support bases.</li>
+</ul>
+</div>
+</div>
+<div id="bn-rejected-by-all-races" class="section level2">
+<h2>BN rejected by all races</h2>
+<p>As a coda, I wanted to see if there were patterns in the shift in support from BN towards the opposition. Traditionally, BN has won thanks to its base of <a href="https://www.reuters.com/article/us-malaysia-election-manifesto/malaysias-najib-targets-key-support-base-at-manifesto-launch-idUSKBN1HE0LJ">ethnic Malay voters</a>, and its leaders have blamed other races (e.g., the ethnic Chinese) for <a href="https://www.ft.com/content/460f0c42-b711-11e2-841e-00144feabdc0">turning on them</a>.</p>
+<p>The following graph refutes this; it displays the change in the margins for both BN and PH from GE13 to GE14 for constituencies with varying proportions of ethnic-Malay voters.</p>
+<p><img src="/post/2018-05-15-ge14-a-statistical-snapshot_files/figure-html/tsunami-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>While there is a decreasing trend in support for Pakatan in overwhelmingly Malay-majority constituencies (in which they lost the seats of their former partner PAS, see section about change in support from GE13 to GE14), there is a nationwide shift of increased support for PH – most of the constituencies (even those consisting of 90% Malay voters) show increased support for PH.</p>
+<p>In contrast, almost all constituencies, regardless of the proportion of ethnic-Malay voters, decreased their support for BN. The erosion of BN’s support across the nation, including from Malay-majority constituencies, caused their historic loss.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Few people (myself included) expected this outcome. There is uncertainty inherent in making predictions and forecasts from data (though some will of course <a href="https://www.malaysiakini.com/news/423535">be more accurate than others</a>). However, data helps us explain and understand what happened after the fact. I’m excited to read the analyses in the coming days conducted by others on this historic Malaysian election.</p>
+<p>I’m hoping this will be a step towards getting Malaysians to be more data-driven and statistically-literate. Malaysia needs its own version of <a href="http://www.fivethirtyeight.com/">FiveThirtyEight</a>. <em>DuaRatusDuaDua</em> anyone?</p>
+</div>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
