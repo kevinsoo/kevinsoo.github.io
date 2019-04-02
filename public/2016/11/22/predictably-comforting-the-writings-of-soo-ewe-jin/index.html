@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Predictably comforting: The writings of Soo Ewe Jin &middot; Casual Inference</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  
+  <link rel="icons8-scatter-plot-90" sizes="144x144" href="/icons8-scatter-plot-90.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Casual Inference" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/"><h1>Casual Inference</h1></a>
+      <p class="lead">
+      Adventures of a Data Scientist <a href="http://twitter.com/civisanalytics">@CivisAnalytics</a>. Occasional causal inferences.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        
+        <li><a href="/about/"> About </a></li><li><a href="/post/"> Posts </a></li><li><a href="/categories/"> Categories </a></li><li><a href="/tags/"> Tags </a></li>
+      </ul>
+    </nav>
+    
+    <div>
+        <h3 class="white">Links</h3>
+        <i class="fab fa-twitter fa-fw"></i> <a href="http://twitter.com/kevinwxsoo">Twitter</a><br>
+        <i class="fab fa-github fa-fw"></i> <a href="https://github.com/kevinsoo">GitHub</a><br>
+        <i class="far fa-envelope fa-fw"></i> <a href="mailto:kevinsoo87@gmail.com?Subject=Hello">Email</a><br>
+        <br>
+    </div>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Predictably comforting: The writings of Soo Ewe Jin</h1>
+  <time datetime=2016-11-22T00:00:00Z class="post-date">Tue, Nov 22, 2016</time>
+  
+
+
+<p>My father passed away on November 17, 2016. His life has been memorialized in <a href="http://www.thestar.com.my/news/nation/2016/11/17/veteran-the-star-editor-soo-ewe-jin-passes-away/">countless</a> <a href="http://www.thestar.com.my/opinion/columnists/sunday-starters/2016/11/20/continue-his-legacy-of-kindness-may-the-spirit-of-this-column-live-on-and-may-we-all-keep-on-buildin/">tributes</a> <a href="http://www.thestar.com.my/opinion/columnists/on-the-beat/2016/11/20/farewell-my-dear-friend-ewe-jin-he-was-one-of-the-kindest-most-generous-and-positive-people-i-have-h/">published</a> in the <a href="http://www.thestar.com.my/news/nation/2016/11/20/sundays-will-never-be-the-same-again/">Malaysian</a> <a href="http://www.thestar.com.my/opinion/letters/2016/11/21/make-sure-each-moment-and-each-day-counts/">press</a> and on social media. An executive editor at the most widely-read English daily in Malaysia, he had a popular weekly column: <a href="http://www.thestar.com.my/search/?q=%22sunday+starters%22&amp;qkey=sunday+starters"><em>Sunday Starters</em></a>.</p>
+<p>As a way of navigating the mourning process, I set out to collect all his writings published in The Star. I’m sure the editors would have given me all his writings if I had asked, but instead I wrote some <a href="https://github.com/kevinsoo/rememberingDad">code</a> to scrape all 366 articles he authored from the website. To try this yourself, run <code>scrape_articles.R</code>, which retrieves all his articles and saves them into a data frame.</p>
+<p>Plenty of people found my dad’s writing to be encouraging and comforting – I’ve been told that it fell within the <em>chicken-soup-for-the-soul</em> genre of writing. While that is a decent high-level characterization of his body of work, I sought a more satisfactory data-driven description.</p>
+<div id="in-his-own-words" class="section level2">
+<h2>In his own words</h2>
+<p>Words are a writer’s tools, used to convey information and elicit responses in readers. The first part of this analysis looks at the words my dad used in his writing. Perhaps the words he used can shed light on the kinds of concepts he was most interested in communicating to readers.</p>
+<div id="who-was-his-favorite" class="section level4">
+<h4>Who was his favorite?</h4>
+<p>My dad was fond of writing about his family, though we hated when we became unwitting subjects of the week’s column. He usually anonymized our appearances as requested, but sometimes mentioned us anyway. The following graph displays the number of appearances by each members of our nuclear family (both in name and title).</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/family-1.png" width="960" style="display: block; margin: auto auto auto 0;" /></p>
+<p>My wife (“Evelyn”) got one mention in my dad’s last few columns. He mentions “son” 76 times, but this doesn’t discriminate between mentions of Tim (my brother) and I. I am mentioned by name twice, compared to Tim who is mentioned five times. All these mentions pale in comparison to my mother – she is mentioned by name (“Angie”“) once, but referred to as his wife 136 times.</p>
+</div>
+<div id="frequently-used-words" class="section level4">
+<h4>Frequently-used words</h4>
+<p>A crude way of determining what he wrote about is by looking at his most frequently-used words. The following graph plots the frequencies of the 25 most common words in his writing (excluding stopwords like “a” and “the”).</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/histogram-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>Some of these high-frequency words give us clues about his subject-matter: “people” (857 appearances), “time” (696 appearances), and “life” (561 appearances) fit pretty well on a conceptual level with the focus of his column – reflections about appreciating people and everyday things. Since the text I analyzed consisted of 366 articles, most of these words appeared more than once per article.</p>
+<p>Visualizing these in a wordcloud gives us more room, so we can look at the 100 most frequently used words (each of which appears &gt; 130 times in his writings). The size and color of each word corresponds to how frequently it appears in his writing. <img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/wordcloud-1.png" width="672" style="display: block; margin: auto;" /> In the wordcloud, you’ll see other semi-frequent words like “work” (423 appearances), “world” (392 appearances), and “friends” (292 appearances) that give you more hints of what he often wrote about. However, word-frequency alone doesn’t paint a very clear picture. There are some high-frequency words like “will” (1012 appearances), “can” (920 appearances), and “one” (831 appearances) that don’t suggest particular subject-matter and are highly dependent on context.</p>
+<p>A bigger problem is that we’re assuming particular nouns work as standalone markers and evidence of particular topics. However, the absence of a word (e.g., “friends”) doesn’t necessarily mean that a particular topic isn’t being written about. The following analyses look beyond individual words to the relationships between words.</p>
+</div>
+</div>
+<div id="word-neighbors" class="section level2">
+<h2>Word neighbors</h2>
+<p>A word’s immediate context may give us an idea of what it means. If a word like “will” often appears near “friends”, then the writer is probably using it to write about the things that friends tend to do, rather than using it in reference to a legal document. Restricting the analysis to the 25 most frequently-used words, we can calculate the <a href="https://en.wikipedia.org/wiki/Euclidean_distance">euclidian distance</a> between each pair of words. These distances are plotted in the following heatmap, with darker colors representing pairs that appear closer together on average. The distance between each word with itself, which is 0, is represented on the diagonal.</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/heatmap-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Unfortunately, it’s hard to decipher any meaningful pattern in the distance between pairs of words from the heatmap. From the computed distances, we can generate a dendrogram (a type of <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)">tree graph</a>) to identify pairs of words that are “neighbors” of each other.</p>
+<p>This dendrogram organizes the 25 most frequently-used words by their distance to each other, revealing “neighborhoods” of words. This highlights words that are frequently used in tandem, suggesting either that they are parts of commonly-used phrases (e.g., “one time”), or that they are concepts the writer treated as related (e.g., “work” and “life”). <img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/dendrogram-1.png" width="672" style="display: block; margin: auto;" /> Moving down the tree, each branching creates two neighborhoods, showing us which word neighborhoods are close to each other. At the lowest level, we can see which individual words are neighbors with each other.</p>
+<p>From the top-down, the first level of branching produces one large and diverse neighborhood on the left, and one smaller but more focused neighborhood on the right. This latter neighborhood seems to represent a cluster of words used in tandem with “people”, suggesting my dad wrote a lot about people using these words.</p>
+<p>I’ve not attempted an exhaustive analysis of the words in my dad’s writings. People are free to infer how these words all relate to each other and what they imply about the subject-matter of his writings. My goal in this section was simply to compute these basic statistics and visualize them to memorialize the words he used. The following analyses move beyond surface-level words to focus on deeper information – the topics – contained in his writings.</p>
+</div>
+<div id="underlying-topics" class="section level2">
+<h2>Underlying topics</h2>
+<p>As mentioned above, the absence of a particular word doesn’t imply that a particular topic isn’t being written about. In this section, I attempt to build a <a href="https://en.wikipedia.org/wiki/Topic_model">topic model</a> of my dad’s writings. A topic model assumes:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>In a collection of writings by a single writer, there will be a number of topics being written about.</strong> The data here consists of 366 articles by my dad. There will be more than one topic because the articles are not all about the same thing, but there will not be 366 topics because multiple articles will be about the same topic. Every writer probably writes reliably about a small number of topics (we’ll say a columnist like my dad probably wrote about 2–5 topics throughout his writings).</p></li>
+<li><p><strong>Each topic is written about using reliable collections of words.</strong> When writing about a particular topic, a writer tends to use the same words. These words need not contain an explicit label for the topic (e.g., a topic about “sports” need not contain any names of sports; they could just contain verbs like “run”, “kick”, and “jump”). A topic is thus a cluster of co-occuring words that are linked by some underlying generative process – a writer “generates” these words when communicating a particular topic.</p></li>
+<li><p><em>Each article is about a combination of the topics in different proportions; we figure out the proportions from the words that are present.</em> Some articles are about a particular topic more than any other – if so, we expect to see many words associated that topic, but few words associated with other topics. Some articles are about multiple topics, in which case we expect to see words associated with multiple topics.</p></li>
+</ol>
+<div id="identifying-the-topics" class="section level4">
+<h4>3.1 Identifying the topics</h4>
+<p>It’s tricky to identify the number of topics (<em>k</em>) present in a corpus. There are some <a href="http://stackoverflow.com/questions/21355156/topic-models-cross-validation-with-loglikelihood-or-perplexity/21394092">mathematical</a> <a href="http://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-16-S13-S8">approaches</a> to determining the optimal <em>k</em>, but they do not always produce topics (i.e. clusters of words) that are semantically meaningful. A simpler method is specifying an <em>a priori</em> number of topics, running the algorithm, and looking at the words (terms) associated with each topic to see if they are semantically meaningful. As mentioned above, <em>k</em> of 2 to 5 seem like reasonable values for a columnist like my dad.</p>
+<p>Using the <code>topicmodels</code> package, I ran the Latent Dirichlet allocation (LDA) algorithm with <em>k</em> = 2, 3, 4, and 5, and determined that having three topics produced the best (most meaningful) topic distribution. The table below shows the three topics, which I have named, along with the top five terms associated with each.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Encouragement</th>
+<th>Reflections</th>
+<th>Society</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>can</td>
+<td>life</td>
+<td>work</td>
+</tr>
+<tr class="even">
+<td>people</td>
+<td>time</td>
+<td>public</td>
+</tr>
+<tr class="odd">
+<td>will</td>
+<td>way</td>
+<td>Malaysia</td>
+</tr>
+<tr class="even">
+<td>still</td>
+<td>day</td>
+<td>country</td>
+</tr>
+<tr class="odd">
+<td>world</td>
+<td>one</td>
+<td>first</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>Encouragement</em> topic probably encompasses writings of my dad where he gave exhortations to his readers to positively influence the world. <em>Reflections</em> probably include musings about aspects of daily life and the passage of time. Articles about <em>Society</em> are about the workplace and aspects of Malaysian society.</p>
+</div>
+<div id="classifying-articles" class="section level4">
+<h4>Classifying articles</h4>
+<p>The following graph displays the classification of all the articles based on their dominant topics.</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/classification-1.png" width="960" style="display: block; margin: auto auto auto 0;" /></p>
+<p>I simply categorized each article based on which topic was most present. However, as noted above, multiple topics can be present in different proportions in a given article. Therefore, classifying articles in this way loses significant information about the mixture of topics.</p>
+<p>For each article, LDA actually gives us the topic distribution, <em>P</em>(topic|article), such that the mixture of all topics sums to 1 within each article. An article classified as “Encouragement” above may have gotten that classification despite all topics being somewhat equally present, but with <em>P</em>(topic = <em>Encouragement</em>|article) being slightly higher than the second-most present topic. For a fuller picture, the following graph plots the topic distributions for all my dad’s articles.</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/topicsOverTime-1.png" width="960" style="display: block; margin: auto auto auto 0;" /></p>
+<p>As can be seen, my dad wrote pretty evenly about all three topics in all his articles. However, it might be interesting to look at articles where one topic was significantly more present than the others, to see how well the topic model did. For each topic, I looked for one article where the topic distribution heavily favored the main topic relative to the other two. The following table displays these articles and <em>P</em>(topic|article) for each topic (the probability of the main topic is <strong>bolded</strong>).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Article</th>
+<th>Encouragement</th>
+<th>Reflections</th>
+<th>Society</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="http://www.thestar.com.my/business/business-news/2011/02/28/repair--the-fourth-r-missing-in-our-lives/"><em>Repair – the fourth ‘R’ missing in our lives</em></a></td>
+<td><strong>.58</strong></td>
+<td>.21</td>
+<td>.21</td>
+</tr>
+<tr class="even">
+<td><a href="http://www.thestar.com.my/opinion/columnists/sunday-starters/2014/06/08/my-silver-lining-when-people-relate-to-my-journeys-with-cancer-they-often-focus-on-the-ailment-rathe/"><em>My silver lining</em></a></td>
+<td>.15</td>
+<td><strong>.70</strong></td>
+<td>.15</td>
+</tr>
+<tr class="odd">
+<td><a href="http://www.thestar.com.my/news/nation/2014/09/28/a-time-for-reflection-the-law-fraternity-will-honour-the-late-sultan-of-perak-at-this-years-sultan-a/"><em>A time for reflection</em></a></td>
+<td>.09</td>
+<td>.09</td>
+<td><strong>.82</strong></td>
+</tr>
+</tbody>
+</table>
+<p>From reading the articles, it might be difficult to distinguish between <em>Encouragement</em> and <em>Reflections</em>. This is because all articles contain some mixture of the two, and because there is probably some conceptual overlap between these topics.</p>
+<p>An interesting result is that articles about <em>Society</em> tended to be those that were not from his weekly column – they tended to be profiles, interviews, and obituaries of prominent figures in Malaysia’s civil society and business world. Most of these articles were found in the business section of the newspaper – where he also contributed some writings.(It is also worth noting that the article above about <em>Society</em> is titled <em>A time for reflection</em>, but is actually an article reflecting on the life of a prominent member of Malaysia’s legal fraternity that doesn’t contain the type of reflection typical of his <em>Reflections</em>).</p>
+<p>We expect articles in the business section to be about <em>Society</em> much more than we expect them to be <em>Encouragement</em> or <em>Reflections</em>. I checked how many of his articles from the business section (52 of them) the LDA process correctly classified as being about the <em>Society</em> topic.</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/business-1.png" width="960" style="display: block; margin: auto auto auto 0;" /></p>
+<p>Only 22 of 52 articles he wrote in the business section were classified as being about <em>Society</em>. It seems that even when writing in the business section, he could not help but include <em>Encouragement</em> and <em>Reflections</em>. That’s just the kind of person he was.</p>
+</div>
+<div id="writing-over-time" class="section level4">
+<h4>3.3 Writing over time</h4>
+<p>The prior analysis shows my dad’s writings were pretty consistently about three dominant topics. Did his focus on each of these topics change over time? The following graphs plot <em>P</em>(topic|article) for each topic over time. A linear trend has been fitted to each graph so we can see if there are trends over time in each topic.</p>
+<p><img src="/post/2016-11-22-predictably-comforting-the-writings-of-soo-ewe-jin_files/figure-html/trends-1.png" width="960" style="display: block; margin: auto auto auto 0;" /></p>
+<p><em>Society</em> generally had a smaller presence in most of his writings – there seems to be the occasional article that is strongly about the topic, while it is present only at a low level for the majority of his writings. My dad occasionally wrote articles for the business and news sections of the paper, which probably accounted for the articles where <em>P</em>(topic = <em>Society</em>|article) are high. He worked in the business section in his earlier years, but stopped writing for them later on – which appears to be reflected in the overall decrease in this topic’s presence in his writings.</p>
+<p>Over time, his writings increasingly focused on <em>Reflections</em> and less on <em>Encouragement</em> (the correlation between these topics is negative, <em>r</em> = -.59). This doesn’t mean my dad was getting less encouraging, merely that over time his writings consisted less of words exclusive to that topic (and even in his last few years, <em>P</em>(topic = <em>Encouragement</em>|article) was still pretty high – around .3 on average). My best guess is that my dad became more reflective (see the increase in <em>Reflections</em> over time), and that decreased the space he could dedicate to other topics.</p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>4 Conclusion</h3>
+<p>As much as an analysis of word frequencies and topic models can shed light on the content of my dad’s writings, they cannot capture everything. This failure goes beyond the deliberate simplification of problems I have permitted to keep things practical, and beyond the subjective nature of some of these analyses (e.g., I don’t have any more justification for choosing <em>k</em> = 3 other than that those three topics make sense).</p>
+<p>The analyses fail because my dad was much more than just his writings. I do not present any analyses that allow us to make inferences about the character of this man.</p>
+<p>What I am doing is inherently reductionistic – I want to summarize his writings to make sense of them. My dad loved writing, so this is an attempt to preserve that which he loved. My dad wrote about matters of the heart, and probably would not have bought fully into the data-driven approach I have used.</p>
+<p><em>This post is dedicated to Soo Ewe Jin (1959–2016).</em></p>
+</div>
+</div>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

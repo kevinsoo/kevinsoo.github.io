@@ -1,0 +1,67 @@
+---
+title: Presidential clusters
+author: Kevin Soo
+date: '2017-04-03'
+slug: presidential-clusters
+categories:
+  - R
+tags:
+  - politics
+---
+
+
+
+<p>C-Span recently released the results of their Presidential Historians Survey for 2017. Historians (<em>n</em> = 91) gave scores to each US president on multiple attributes deemed important to the presidency, which allowed the presidents to be ranked. The <a href="https://www.c-span.org/presidentsurvey2017/">C-Span report</a> allows you to sort through the data by attribute (spoiler alert: Lincoln was rated highest overall, and Buchanan lowest).</p>
+<p>There are potential difficulties with these rankings: perhaps the attributes measured are not the only/most relevant ones for a good president to display, and it’s also possible that different historians interpret each attribute differently. However, the ratings of all historians were <a href="https://www.c-span.org/presidentsurvey2017/?page=methodology">averaged</a> suggesting that the <a href="https://en.wikipedia.org/wiki/Wisdom_of_the_crowd">wisdom of the crowd</a> could prevail. For the most part, I’ll avoid theses issues and focus on describing the data.</p>
+<div id="presidential-attributes" class="section level2">
+<h2>Presidential attributes</h2>
+<p>The following graphs plot (1) the average score each president, and (2) their scores on each attribute.</p>
+<p><img src="/post/2017-04-03-presidential-clusters_files/figure-html/time-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>From the graphs, we can see that some presidents score pretty consistently across attributes, while some score pretty inconsistently (those with longer error bars in the first graph). These could be due to there being variation across all attributes, or due to them scoring particularly well or poorly on a few attributes (check out Nixon, who scores much higher on international relations and much lower on moral authority than on the rest of his attributes).</p>
+</div>
+<div id="what-makes-a-president" class="section level2">
+<h2>What makes a president?</h2>
+<p>Are there certain attributes that tend to “go together” across presidents? We can create a dendrogram of the attributes to show which attributes are similar or different from each other (this is computed from the euclidean distance between attributes, a measure of similarity). I’ve cut the branches of the resulting dendrogram to group the nodes into five clusters. A cluster is a set of attributes that tend to vary together across different presidents.</p>
+<p><img src="/post/2017-04-03-presidential-clusters_files/figure-html/attrClust-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p>The clustering reveals that whether a president <em>pursued equal justice for all</em> (the first attribute from the left) is independent of the other attributes. This attribute forms its own cluster: <strong>Equality</strong>. Presidents like Lincoln, LBJ, and Obama scored high on this. It’s probably an independent cluster because many otherwise highly-rated presidents scored poorly on this (e.g., Washington and Jefferson).</p>
+<p>The next cluster consists of four attributes – more specifically, two closely related pairs of attributes. <em>Crisis leadership</em> is related to <em>performance within the context of the times</em>, which makes sense if a president is known and judged for leadership while addressing specific problems in history (e.g., war). <em>Public persuasion</em> is related to <em>vision and setting of an agenda</em>, which makes sense because a president with a distinctive and unique vision probably needs to do more to persuade and mobilize the public. We’ll call this cluster <strong>Traditional leadership</strong>.</p>
+<p><em>Moral authority</em> and <em>international relations</em> are each independent attributes forming their own clusters, <strong>Morality</strong> and <strong>Diplomacy</strong>, respectively.</p>
+<p>The final cluster consists of three attributes: <em>economic management</em>, <em>administrative skills</em>, and <em>relations with Congress</em>. We’ll call this cluster <strong>Political ability</strong>: attributes that enable presidents to accomplish policy goals.</p>
+</div>
+<div id="types-of-presidents" class="section level2">
+<h2>Types of Presidents</h2>
+<p>I calculated the euclidean distance between presidents based on their scores across all the attributes, and used that to cluster them. While the previous dendrogram clusters attributes based on how they vary together across presidents, this dendrogram clusters presidents based on how they vary together across clusters of attributes. I’ve cut the branches of this dendrogram to group the nodes into 7 clusters of presidents.</p>
+<p><img src="/post/2017-04-03-presidential-clusters_files/figure-html/presClust-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>I named each cluster based on responses from a survey I sent out (<em>n</em> = 26). The ages of respondents were diverse (the youngest were born when Clinton was president, half were born at least as far back as 1986, when Reagan was president). I showed the respondents each group of presidents, and had them write down commonalities they thought those presidents shared, which informed the (somewhat subjective) names.</p>
+<ul>
+<li><strong>War-timers</strong> were presidents known for their involvement in war. Most responses referenced a specific war or an act of theirs (e.g., Truman dropping the bomb).</li>
+<li><strong>All-stars</strong> were the most well-known and generally best regarded. Some responses referenced their involvement in wars as well, but their distinctive feature is that respondents recognize they are famours and respected.</li>
+<li><strong>Expansionists</strong> elicited pretty diverse comments, so it is likely a less well-defined cluster. Respondents associated some of these presidents with expansionism and American exceptionalism.</li>
+<li><strong>Social Democrats</strong> were known for (1) being Democrats, and (2) to differing degrees and in different ways, expanded the role of the Federal Government in advancing social and progressive values.</li>
+<li><strong>Unremarkables</strong> were recognized for being unrecognizable. Respondents either didn’t see any commonalities, or saw them as being commonly forgettable. Some even responded that these presidents were ranked poorly by historians.</li>
+<li><strong>Republicans</strong> were known for being, you guessed it, Republicans. It’s worth noting that Van Buren wasn’t one.</li>
+<li><strong>The Others</strong> did not elicit any notable and common responses. This makes sense, as this is probably a less well-defined cluster of presidents that didn’t quite fit into any other cluster.</li>
+</ul>
+</div>
+<div id="do-laypeople-recognize-the-clusters" class="section level2">
+<h2>Do laypeople recognize the clusters?</h2>
+<p>The clustering of presidents was based on ratings by historians in the C-Span survey, but how reasonable do these clusters appear to the average person? In addition to asking the survey respondents to write down commonalities, I had them (1) rate how similar the presidents in that group were to each other, (2) report the number of presidents in the group that they could remember at least one fact about as a measure of familiarity, and (3) rate the quality of the presidents within the cluster.</p>
+<p>We can use this data to see how well the historians’ rantings fit with the opinions of laypeople. However, it is worth noting that the sample was probably more knowledgable about history than the average person: 22 of 26 had studied US History at some level, and 20 of 26 said they were either <em>somewhat</em> or <em>very interested</em> in US history.</p>
+<p>How did the clusters compare in how similar and well-defined they were? How did they compare in how famous they were? The following graphs plot the average familiarity and similarity ratings for each cluster by respondents. Familiarity is computed as a proportion, and similarity is rated on a 5-point scale.</p>
+<p><img src="/post/2017-04-03-presidential-clusters_files/figure-html/qualtrics1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>War-timers</strong>, <strong>All-stars</strong> and, <strong>Social Democrats</strong> are generally recognizable and viewed as cohesive clusters (the average ratings are above the midpoint (the presidents in the cluster are “neither similar nor different”). Most presidents in the <strong>Republicans</strong> cluster are not familiar, but it seems people have some sense that they’re mostly Republican, leading to average similarity ratings. This cluster-level knowledge (seen by clusters scoring higher on similarity than familiarity) seems to be at play for the <strong>Expansionists</strong> as well, and appears most extreme for the <strong>Unremarkbles</strong> – most people aren’t familiar with the presidents, but have a sense that they’re known for being forgettable (“known unknowns”, as Rumsfeld put it). <strong>The Others</strong> have low familiarity and similarity ratings, probably because these are the leftover presidents.</p>
+<p>How well do people’s perceptions of the quality of each cluster map onto the judgments of the expert historians from the C-Span survey? The following plot shows the relationship between the average judgments of quality for each cluster by respondents in both my survey and the C-Span survey. There is a strong positive relationship (<em>r</em> = .95), suggesting that laypeople and experts have similar views of these clusters.</p>
+<p><img src="/post/2017-04-03-presidential-clusters_files/figure-html/qualtrics2-1.png" width="432" style="display: block; margin: auto;" /></p>
+<p>The plot also highlight which clusters are rated as having the highest and lowest-quality presidents. It’s no suprise, the <strong>All-stars</strong> come out tops, and the <strong>Unremarkables</strong> score lowest.</p>
+</div>
+<div id="cluster-profiles" class="section level2">
+<h2>Cluster profiles</h2>
+<p>It seems that the C-Span ratings and resulting clusters are somewhat meaningful to laypeople. Finally, let’s look at how each cluster of presidents compares across clusters of attributes. This will give us profiles of different types of presidents.</p>
+<p><img src="/post/2017-04-03-presidential-clusters_files/figure-html/cspan-1.png" width="576" style="display: block; margin: auto;" /> <strong>Unremarkables</strong> and <strong>Republicans</strong> score the lowest across most attribute clusters, and are pretty balanced. <strong>The Others</strong> are also pretty balanced across the board, but have higher overall scores than presidents in those two clusters. <strong>Social Democrats</strong> beat everyone else on equality, but perform below average on other clusters (and particularly poorly on morality and diplomacy).</p>
+<p><strong>Expansionists</strong> score really poorly on equality, but do pretty well on most other attribute clusters. The <strong>All-stars</strong> have a similar profile, but with much higher overall scores (to the point that they score highest across all clusters, except for equality). Is it possible that the four <strong>All-stars</strong> are simply exceptional instances of <strong>Expansionists</strong>? Could a future <strong>Expansionist</strong> president come along, and with the right historical factors be elevated to the <strong>All-stars</strong>?</p>
+<p><strong>War-timers</strong> score pretty high across the board, suggesting that they don’t have particular expertise, and perhaps are judged more positively because the difficult circumstances they faced amplifies the expression of all attributes. Their profile is not dissimilar to <strong>the Others</strong>, aside from a higher intercept. Similar to the relationship between <strong>Expansionists</strong> and the <strong>All-stars</strong>, this raises an intriguing possibility – could <strong>War-timers</strong> be normal presidents that historical circumstances elevate beyond their peers?</p>
+</div>
+<div id="looking-forward" class="section level2">
+<h2>Looking forward</h2>
+<p>When the current president leaves office, and C-Span releases the results of an updated survey, I plan to repeat the analyses above so we can get an idea of the type of president he was. Actually, why wait? If you want to rate the current president, you can do so on <a href="https://goo.gl/forms/VXb5xTJMG5GZxpP53">this form</a>, and I’ll use people’s ratings to analyze how well he’s doing. That should give us interesting data, as we can compare measurements <em>during</em> his presidency with how historians rate him in hindsight.</p>
+</div>
