@@ -1,0 +1,165 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load libraries
+# If there is an error, you probably need to install them first
+library(tidyverse)
+library(cowplot)
+```
+
+## Intro
+
+This is an R Markdown document. You can write your notes in the main body of this document, while editing/writing code in the embedded code chunks below. When you run the code in a chunk, the output (printed text or a plot) will appear beneath that code chunk. As we go through the tutorial, we will write/add code in the chunks, and then run the code to create visualizations.
+
+For more details on using R Markdown see <http://rmarkdown.rstudio.com>. When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r mpg}
+mpg
+```
+
+That code prints the head of the pre-loaded `mpg` dataset, which we will be using to create visualizations. You can [read more about the dataset here](https://ggplot2.tidyverse.org/reference/mpg.html). This dataset (and almost all datasets we use to make plots in `ggplot2`) possess two features:
+
+1. Each row contains one observation
+2. Each column contains one variable
+
+Datasets in this format are called *tidy* datasets. You can read more about this and methods for handling/manipulating data at <https://r4ds.had.co.nz/>.
+
+## Plotting a single variable with a histogram
+
+The `mpg` dataset contains data of 234 different cars. First we'll get a look at the distribution of the `mpg` variable in a histogram.
+
+```{r histogram}
+# Standard ggplot call, specifies data and then maps variables to different 'aesthetics' (x, y, etc.)
+# ggplot(data = mpg, aes(x = hwy))
+
+# Using tidyverse, we can 'pipe' data into ggplot2 with '%>%'
+# This is equivalent to the call above, but is preferable because we can perform operations on the data before plotting
+mpg %>%
+    ggplot(aes(x = hwy)) +
+    geom_histogram()
+```
+
+Now we have an idea of what this distribution looks like. Let's build on this a bit. 
+
+1. We have a warning here from ggplot. Why? How should we fix it?
+2. Does our distribution look strange at all? What's happening here?
+3. What's the best way to get a better look at what's happening?
+
+```{r histogramBuild}
+mpg %>%
+    ggplot(aes(x = hwy)) +
+    geom_histogram()
+
+# SOLUTION
+# mpg %>%
+#     ggplot(aes(x = hwy)) +
+#     geom_histogram(binwidth = 1) +
+#     facet_wrap(aes(facets = cyl), nrow=length(unique(mpg$cyl)))
+```
+
+## Creating scatterplots from data
+
+Next we'll plot the relationship between engine displacement in litres (`disp`) and highway mileage (`hwy`).
+
+```{r scatterplot}
+# Standard ggplot call, specifies data and then maps variables to different 'aesthetics' (x, y, etc.)
+# ggplot(data = mpg, aes(x = displ, y = hwy))
+
+# Using tidyverse, we can 'pipe' data into ggplot2 with '%>%'
+# This is equivalent to the call above, but is preferable because we can perform operations on the data before plotting
+mpg %>%
+    ggplot(aes(x = displ, y = hwy))
+```
+
+That code above creates a blank plot. In the code below, we will gradually build a scatterplot that can help us understand the relationships between the variables. We recommend keeping notes in the Markdown document about the steps we're taking, as well as writing comments in your code so you remember what each line does.
+
+## Plots with numerical variables
+
+Using the `mpg` data and the template below, we will build an informative plot in several steps.
+
+1. First, create a scatterplot with engine displacement (`displ`) on the x-axis, and highway mileage (`hwy`) on the y-axis. What issues are there with this plot?
+2. Make adjustments to the scatterplot to fix the issue above.
+3. Let's see if we can (visually) fit a model that explains the data.
+4. Next, we'll explore if there are other variables that can explain the relationship between `displ` and `hwy`. Start with the number of cylinders (`cyl`). How would you represent this variable?
+5. Next, fit a model that takes into account the number of cylinders.
+6. This plot now represents 3 variables. How do we represent an additional variable, `year`?
+7. Now add some flourishes (theme and title).
+
+```{r scatterplotBuild}
+mpg %>%
+    ggplot(aes(x = displ, y = hwy))
+
+# SOLUTION
+# mpg %>%
+#     ggplot(aes(x = displ, y = hwy)) + 
+#     geom_jitter(aes(color = as.factor(cyl)), alpha = .3, width = .05, height = .3) +
+#     stat_smooth(method = "lm", aes(color = as.factor(cyl))) +
+#     facet_grid(~ year) +
+#     scale_color_discrete(name = "Cylinders") +
+#     theme_minimal() +
+#     labs(title = "")
+```
+
+## Plots with categorical variables
+
+In the plot above, we were interested primarily in the relationship between two numeric variables, which we could plot on the x-axis and y-axis, although we did visualize different groups as well. In this section, we will create a plot that visualizes the relationship between one categorical variable (`manufacturer`) and a numeric variable (`hwy`). Sometimes, you might want to summarize the raw data (e.g. when plotting means for different conditions).
+
+1. Start by grouping the data by the factor of interest (mapped to the x-axis), and summarizing the outcome variable (*M*, *SD*). The mean of the outcome variable can be mapped to the y-axis as points.
+2. Next, map the *SD*s to error bars.
+3. Try representing the number of observations (*N*) as well.
+4. Reorder the data so that the plot looks cleaner.
+5. What else can we do to clean up the plot?
+
+```{r categorical}
+# Create summarized data frame first, which we will then pipe to ggplot2
+# Could be piped directly without saving, depends on whether you'll use it again
+df <- mpg %>% 
+    group_by(manufacturer) %>% # specify grouping variable
+    summarise(N = n(), M.hwy = mean(hwy), SD.hwy = sd(hwy)) # descriptive statistics of interest
+
+# Create plot
+df %>%
+    ggplot(aes(x = manufacturer, y = M.hwy))
+
+# SOLUTION
+# mpg %>%
+#     group_by(manufacturer) %>%
+#     summarise(N = n(), M.hwy = mean(hwy), SD.hwy = sd(hwy)) %>%
+#     ggplot(aes(x = fct_reorder(manufacturer, -M.hwy), y = M.hwy)) +
+#     geom_errorbar(aes(ymin = M.hwy - SD.hwy, ymax = M.hwy + SD.hwy), width = .1) +
+#     geom_point(aes(size = N)) +
+#     theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+```
+
+Alternatively, you might want to plot the raw data so your readers can see how the data are distributed. Create the plot below:
+
+1. Start by mapping the grouping and outcome variables to the x-axis and y-axis. What issues are there with this plot?
+2. Fix the issue above, similar to how you fixed it in the first plot you created.
+3. How can we add a summary of the data?
+4. Reorder the data so that the plot looks cleaner.
+
+```{r categoricalSummarized}
+mpg %>% 
+    ggplot(aes(x = manufacturer, y = hwy))
+
+# SOLUTION
+# mpg %>%
+#     ggplot(aes(x = fct_reorder(manufacturer, -hwy), y = hwy)) +
+#     # geom_violin() +
+#     geom_boxplot() +
+#     geom_jitter(alpha = .3, width = .1) +
+#     theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+```
+
+The two plots correspond to each other. We can combine them into a single plot. First, save each as objects. Next, use the code below to combine them.
+
+```{r categoricalMultiple}
+# plot_grid(a, b, nrow = 2)
+```
+
+## Conclusion
+
+These are just the basics of how we like to use `ggplot2` to explore and visualize data. There are many more aesthetics and fine-grained features you can manipulate. Here are some other things that might be fun and/or useful:
+
+* `gganimate` allows you to create gifs of animated visualizations, opening up interesting possibilities for visualizing time-series information. Here's [an example](https://github.com/thomasp85/gganimate/wiki/Football-Draft-Order).
+* Shiny allows you to build interactive web-apps that include `ggplot2` plots. Here's [an example](https://research-methods-dojo.shinyapps.io/causality_and_regression/) by Ben Rottman on visualizing regression results.

@@ -1,0 +1,18 @@
+/* Unique styles */
+
+body { 
+	padding-top: 70px;
+	padding-bottom: 0px; 
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+section {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+div.reference {
+	padding-left: 30px;
+}
+
