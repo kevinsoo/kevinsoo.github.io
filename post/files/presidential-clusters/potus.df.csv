@@ -1,0 +1,441 @@
+,President,Number,Party,Overall,Rank,Attribute,Score,AttributeRank,OverallSD,OverallRange,Group,Cluster
+1,"Adams, J.",2,Federalist,604,19,AdministrativeSkills,59.9,21,7.168108382,20,The Others,Political ability
+2,"Adams, J.",2,Federalist,604,19,CrisisLeadership,62.8,17,7.168108382,20,The Others,Traditional leadership
+3,"Adams, J.",2,Federalist,604,19,EconomicManagement,62.5,15,7.168108382,20,The Others,Political ability
+4,"Adams, J.",2,Federalist,604,19,InternationalRelations,70.2,13,7.168108382,20,The Others,Diplomacy
+5,"Adams, J.",2,Federalist,604,19,MoralAuthority,70.7,11,7.168108382,20,The Others,Morality
+6,"Adams, J.",2,Federalist,604,19,PerformanceAtTime,64.6,19,7.168108382,20,The Others,Traditional leadership
+7,"Adams, J.",2,Federalist,604,19,PublicPersuasion,50.7,22,7.168108382,20,The Others,Traditional leadership
+8,"Adams, J.",2,Federalist,604,19,PursuedEqualJustice,52.6,15,7.168108382,20,The Others,Equality
+9,"Adams, J.",2,Federalist,604,19,RelationsWithCongress,52,24,7.168108382,20,The Others,Political ability
+10,"Adams, J.",2,Federalist,604,19,VisionAgenda,57.8,20,7.168108382,20,The Others,Traditional leadership
+11,"Adams, J. Q.",6,Democratic-Republican,590,21,AdministrativeSkills,61.4,18,9.613537908,27.4,The Others,Political ability
+12,"Adams, J. Q.",6,Democratic-Republican,590,21,CrisisLeadership,54.1,23,9.613537908,27.4,The Others,Traditional leadership
+13,"Adams, J. Q.",6,Democratic-Republican,590,21,EconomicManagement,58.6,17,9.613537908,27.4,The Others,Political ability
+14,"Adams, J. Q.",6,Democratic-Republican,590,21,InternationalRelations,68.5,15,9.613537908,27.4,The Others,Diplomacy
+15,"Adams, J. Q.",6,Democratic-Republican,590,21,MoralAuthority,70.1,12,9.613537908,27.4,The Others,Morality
+16,"Adams, J. Q.",6,Democratic-Republican,590,21,PerformanceAtTime,57.6,22,9.613537908,27.4,The Others,Traditional leadership
+17,"Adams, J. Q.",6,Democratic-Republican,590,21,PublicPersuasion,42.7,33,9.613537908,27.4,The Others,Traditional leadership
+18,"Adams, J. Q.",6,Democratic-Republican,590,21,PursuedEqualJustice,66.9,9,9.613537908,27.4,The Others,Equality
+19,"Adams, J. Q.",6,Democratic-Republican,590,21,RelationsWithCongress,44.3,32,9.613537908,27.4,The Others,Political ability
+20,"Adams, J. Q.",6,Democratic-Republican,590,21,VisionAgenda,65.5,15,9.613537908,27.4,The Others,Traditional leadership
+21,Arthur,21,Republican,446,35,AdministrativeSkills,52.3,28,3.468605227,11.5,Republicans,Political ability
+22,Arthur,21,Republican,446,35,CrisisLeadership,42.8,32,3.468605227,11.5,Republicans,Traditional leadership
+23,Arthur,21,Republican,446,35,EconomicManagement,43.8,31,3.468605227,11.5,Republicans,Political ability
+24,Arthur,21,Republican,446,35,InternationalRelations,47.5,35,3.468605227,11.5,Republicans,Diplomacy
+25,Arthur,21,Republican,446,35,MoralAuthority,44.2,35,3.468605227,11.5,Republicans,Morality
+26,Arthur,21,Republican,446,35,PerformanceAtTime,45.9,32,3.468605227,11.5,Republicans,Traditional leadership
+27,Arthur,21,Republican,446,35,PublicPersuasion,41.3,37,3.468605227,11.5,Republicans,Traditional leadership
+28,Arthur,21,Republican,446,35,PursuedEqualJustice,40.8,27,3.468605227,11.5,Republicans,Equality
+29,Arthur,21,Republican,446,35,RelationsWithCongress,45.9,29,3.468605227,11.5,Republicans,Political ability
+30,Arthur,21,Republican,446,35,VisionAgenda,41.8,34,3.468605227,11.5,Republicans,Traditional leadership
+31,Buchanan,15,Democratic,245,43,AdministrativeSkills,34,41,6.131965427,16.6,Unremarkables,Political ability
+32,Buchanan,15,Democratic,245,43,CrisisLeadership,17.4,43,6.131965427,16.6,Unremarkables,Traditional leadership
+33,Buchanan,15,Democratic,245,43,EconomicManagement,30.1,42,6.131965427,16.6,Unremarkables,Political ability
+34,Buchanan,15,Democratic,245,43,InternationalRelations,32.1,43,6.131965427,16.6,Unremarkables,Diplomacy
+35,Buchanan,15,Democratic,245,43,MoralAuthority,20.5,43,6.131965427,16.6,Unremarkables,Morality
+36,Buchanan,15,Democratic,245,43,PerformanceAtTime,20.4,43,6.131965427,16.6,Unremarkables,Traditional leadership
+37,Buchanan,15,Democratic,245,43,PublicPersuasion,23.9,43,6.131965427,16.6,Unremarkables,Traditional leadership
+38,Buchanan,15,Democratic,245,43,PursuedEqualJustice,18.4,43,6.131965427,16.6,Unremarkables,Equality
+39,Buchanan,15,Democratic,245,43,RelationsWithCongress,28.4,42,6.131965427,16.6,Unremarkables,Political ability
+40,Buchanan,15,Democratic,245,43,VisionAgenda,19.7,43,6.131965427,16.6,Unremarkables,Traditional leadership
+41,"Bush, G. H. W.",41,Republican,596,20,AdministrativeSkills,63.1,16,10.07800686,31.2,The Others,Political ability
+42,"Bush, G. H. W.",41,Republican,596,20,CrisisLeadership,72.7,12,10.07800686,31.2,The Others,Traditional leadership
+43,"Bush, G. H. W.",41,Republican,596,20,EconomicManagement,52.9,21,10.07800686,31.2,The Others,Political ability
+44,"Bush, G. H. W.",41,Republican,596,20,InternationalRelations,77.3,8,10.07800686,31.2,The Others,Diplomacy
+45,"Bush, G. H. W.",41,Republican,596,20,MoralAuthority,64,17,10.07800686,31.2,The Others,Morality
+46,"Bush, G. H. W.",41,Republican,596,20,PerformanceAtTime,62,20,10.07800686,31.2,The Others,Traditional leadership
+47,"Bush, G. H. W.",41,Republican,596,20,PublicPersuasion,49.8,23,10.07800686,31.2,The Others,Traditional leadership
+48,"Bush, G. H. W.",41,Republican,596,20,PursuedEqualJustice,52,16,10.07800686,31.2,The Others,Equality
+49,"Bush, G. H. W.",41,Republican,596,20,RelationsWithCongress,56.3,15,10.07800686,31.2,The Others,Political ability
+50,"Bush, G. H. W.",41,Republican,596,20,VisionAgenda,46.1,27,10.07800686,31.2,The Others,Traditional leadership
+51,"Bush, G. W.",43,Republican,456,33,AdministrativeSkills,45.5,34,5.199583317,15.9,Republicans,Political ability
+52,"Bush, G. W.",43,Republican,456,33,CrisisLeadership,52.3,25,5.199583317,15.9,Republicans,Traditional leadership
+53,"Bush, G. W.",43,Republican,456,33,EconomicManagement,38.2,36,5.199583317,15.9,Republicans,Political ability
+54,"Bush, G. W.",43,Republican,456,33,InternationalRelations,36.4,41,5.199583317,15.9,Republicans,Diplomacy
+55,"Bush, G. W.",43,Republican,456,33,MoralAuthority,45.8,34,5.199583317,15.9,Republicans,Morality
+56,"Bush, G. W.",43,Republican,456,33,PerformanceAtTime,43.3,35,5.199583317,15.9,Republicans,Traditional leadership
+57,"Bush, G. W.",43,Republican,456,33,PublicPersuasion,49,25,5.199583317,15.9,Republicans,Traditional leadership
+58,"Bush, G. W.",43,Republican,456,33,PursuedEqualJustice,47,19,5.199583317,15.9,Republicans,Equality
+59,"Bush, G. W.",43,Republican,456,33,RelationsWithCongress,51.9,25,5.199583317,15.9,Republicans,Political ability
+60,"Bush, G. W.",43,Republican,456,33,VisionAgenda,46.3,26,5.199583317,15.9,Republicans,Traditional leadership
+61,Carter,39,Democratic,506,26,AdministrativeSkills,49.1,31,11.50663577,35.1,The Others,Political ability
+62,Carter,39,Democratic,506,26,CrisisLeadership,40,37,11.50663577,35.1,The Others,Traditional leadership
+63,Carter,39,Democratic,506,26,EconomicManagement,41.5,33,11.50663577,35.1,The Others,Political ability
+64,Carter,39,Democratic,506,26,InternationalRelations,49.4,32,11.50663577,35.1,The Others,Diplomacy
+65,Carter,39,Democratic,506,26,MoralAuthority,67.1,14,11.50663577,35.1,The Others,Morality
+66,Carter,39,Democratic,506,26,PerformanceAtTime,46.9,29,11.50663577,35.1,The Others,Traditional leadership
+67,Carter,39,Democratic,506,26,PublicPersuasion,42.5,34,11.50663577,35.1,The Others,Traditional leadership
+68,Carter,39,Democratic,506,26,PursuedEqualJustice,75.1,5,11.50663577,35.1,The Others,Equality
+69,Carter,39,Democratic,506,26,RelationsWithCongress,44.2,33,11.50663577,35.1,The Others,Political ability
+70,Carter,39,Democratic,506,26,VisionAgenda,50.8,22,11.50663577,35.1,The Others,Traditional leadership
+71,Cleveland,22,Democratic,540,23,AdministrativeSkills,58.4,22,5.888293471,21.4,The Others,Political ability
+72,Cleveland,22,Democratic,540,23,CrisisLeadership,54.7,22,5.888293471,21.4,The Others,Traditional leadership
+73,Cleveland,22,Democratic,540,23,EconomicManagement,50.1,24,5.888293471,21.4,The Others,Political ability
+74,Cleveland,22,Democratic,540,23,InternationalRelations,56.1,23,5.888293471,21.4,The Others,Diplomacy
+75,Cleveland,22,Democratic,540,23,MoralAuthority,56.6,26,5.888293471,21.4,The Others,Morality
+76,Cleveland,22,Democratic,540,23,PerformanceAtTime,56.7,23,5.888293471,21.4,The Others,Traditional leadership
+77,Cleveland,22,Democratic,540,23,PublicPersuasion,60,20,5.888293471,21.4,The Others,Traditional leadership
+78,Cleveland,22,Democratic,540,23,PursuedEqualJustice,38.6,31,5.888293471,21.4,The Others,Equality
+79,Cleveland,22,Democratic,540,23,RelationsWithCongress,53.6,22,5.888293471,21.4,The Others,Political ability
+80,Cleveland,22,Democratic,540,23,VisionAgenda,55.6,21,5.888293471,21.4,The Others,Traditional leadership
+81,Cleveland,24,Democratic,540,23,InternationalRelations,56.1,23,5.888293471,21.4,The Others,Political ability
+82,Cleveland,24,Democratic,540,23,MoralAuthority,56.6,26,5.888293471,21.4,The Others,Traditional leadership
+83,Cleveland,24,Democratic,540,23,PerformanceAtTime,56.7,23,5.888293471,21.4,The Others,Political ability
+84,Cleveland,24,Democratic,540,23,PublicPersuasion,60,20,5.888293471,21.4,The Others,Diplomacy
+85,Cleveland,24,Democratic,540,23,PursuedEqualJustice,38.6,31,5.888293471,21.4,The Others,Morality
+86,Cleveland,24,Democratic,540,23,RelationsWithCongress,53.6,22,5.888293471,21.4,The Others,Traditional leadership
+87,Cleveland,24,Democratic,540,23,VisionAgenda,55.6,21,5.888293471,21.4,The Others,Traditional leadership
+88,Cleveland,24,Democratic,540,23,CrisisLeadership,54.7,22,5.888293471,21.4,The Others,Equality
+89,Cleveland,24,Democratic,540,23,EconomicManagement,50.1,24,5.888293471,21.4,The Others,Political ability
+90,Cleveland,24,Democratic,540,23,AdministrativeSkills,58.4,22,5.888293471,21.4,The Others,Traditional leadership
+91,Clinton,42,Democratic,634,15,AdministrativeSkills,60.7,20,13.21201473,46.4,Social Democrats,Political ability
+92,Clinton,42,Democratic,634,15,CrisisLeadership,61.5,18,13.21201473,46.4,Social Democrats,Traditional leadership
+93,Clinton,42,Democratic,634,15,EconomicManagement,78.6,3,13.21201473,46.4,Social Democrats,Political ability
+94,Clinton,42,Democratic,634,15,InternationalRelations,63.8,18,13.21201473,46.4,Social Democrats,Diplomacy
+95,Clinton,42,Democratic,634,15,MoralAuthority,33.2,38,13.21201473,46.4,Social Democrats,Morality
+96,Clinton,42,Democratic,634,15,PerformanceAtTime,65.9,17,13.21201473,46.4,Social Democrats,Traditional leadership
+97,Clinton,42,Democratic,634,15,PublicPersuasion,79.6,9,13.21201473,46.4,Social Democrats,Traditional leadership
+98,Clinton,42,Democratic,634,15,PursuedEqualJustice,72.3,6,13.21201473,46.4,Social Democrats,Equality
+99,Clinton,42,Democratic,634,15,RelationsWithCongress,55.1,17,13.21201473,46.4,Social Democrats,Political ability
+100,Clinton,42,Democratic,634,15,VisionAgenda,63.1,19,13.21201473,46.4,Social Democrats,Traditional leadership
+101,Coolidge,30,Republican,506,27,AdministrativeSkills,56.3,25,5.777629272,19.6,Republicans,Political ability
+102,Coolidge,30,Republican,506,27,CrisisLeadership,46.8,29,5.777629272,19.6,Republicans,Traditional leadership
+103,Coolidge,30,Republican,506,27,EconomicManagement,52.7,22,5.777629272,19.6,Republicans,Political ability
+104,Coolidge,30,Republican,506,27,InternationalRelations,50.9,29,5.777629272,19.6,Republicans,Diplomacy
+105,Coolidge,30,Republican,506,27,MoralAuthority,59.1,21,5.777629272,19.6,Republicans,Morality
+106,Coolidge,30,Republican,506,27,PerformanceAtTime,51,26,5.777629272,19.6,Republicans,Traditional leadership
+107,Coolidge,30,Republican,506,27,PublicPersuasion,49.8,24,5.777629272,19.6,Republicans,Traditional leadership
+108,Coolidge,30,Republican,506,27,PursuedEqualJustice,39.5,29,5.777629272,19.6,Republicans,Equality
+109,Coolidge,30,Republican,506,27,RelationsWithCongress,55.1,18,5.777629272,19.6,Republicans,Political ability
+110,Coolidge,30,Republican,506,27,VisionAgenda,44.9,29,5.777629272,19.6,Republicans,Traditional leadership
+111,Eisenhower,34,Republican,745,5,AdministrativeSkills,77,5,7.907022195,24.9,War-timers,Political ability
+112,Eisenhower,34,Republican,745,5,CrisisLeadership,82.3,6,7.907022195,24.9,War-timers,Traditional leadership
+113,Eisenhower,34,Republican,745,5,EconomicManagement,71.5,6,7.907022195,24.9,War-timers,Political ability
+114,Eisenhower,34,Republican,745,5,InternationalRelations,81.5,6,7.907022195,24.9,War-timers,Diplomacy
+115,Eisenhower,34,Republican,745,5,MoralAuthority,85.6,4,7.907022195,24.9,War-timers,Morality
+116,Eisenhower,34,Republican,745,5,PerformanceAtTime,77.2,7,7.907022195,24.9,War-timers,Traditional leadership
+117,Eisenhower,34,Republican,745,5,PublicPersuasion,73,12,7.907022195,24.9,War-timers,Traditional leadership
+118,Eisenhower,34,Republican,745,5,PursuedEqualJustice,60.7,12,7.907022195,24.9,War-timers,Equality
+119,Eisenhower,34,Republican,745,5,RelationsWithCongress,72,6,7.907022195,24.9,War-timers,Political ability
+120,Eisenhower,34,Republican,745,5,VisionAgenda,64.1,16,7.907022195,24.9,War-timers,Traditional leadership
+121,Fillmore,13,Whig,394,37,AdministrativeSkills,42.9,36,5.373019015,19.6,Unremarkables,Political ability
+122,Fillmore,13,Whig,394,37,CrisisLeadership,42.4,34,5.373019015,19.6,Unremarkables,Traditional leadership
+123,Fillmore,13,Whig,394,37,EconomicManagement,40.8,34,5.373019015,19.6,Unremarkables,Political ability
+124,Fillmore,13,Whig,394,37,InternationalRelations,48.2,34,5.373019015,19.6,Unremarkables,Diplomacy
+125,Fillmore,13,Whig,394,37,MoralAuthority,35.8,36,5.373019015,19.6,Unremarkables,Morality
+126,Fillmore,13,Whig,394,37,PerformanceAtTime,38.4,37,5.373019015,19.6,Unremarkables,Traditional leadership
+127,Fillmore,13,Whig,394,37,PublicPersuasion,36.3,40,5.373019015,19.6,Unremarkables,Traditional leadership
+128,Fillmore,13,Whig,394,37,PursuedEqualJustice,28.6,39,5.373019015,19.6,Unremarkables,Equality
+129,Fillmore,13,Whig,394,37,RelationsWithCongress,43.1,36,5.373019015,19.6,Unremarkables,Political ability
+130,Fillmore,13,Whig,394,37,VisionAgenda,37.1,39,5.373019015,19.6,Unremarkables,Traditional leadership
+131,Ford,38,Republican,509,25,AdministrativeSkills,52.9,27,5.728496021,16.4,Republicans,Political ability
+132,Ford,38,Republican,509,25,CrisisLeadership,53.6,24,5.728496021,16.4,Republicans,Traditional leadership
+133,Ford,38,Republican,509,25,EconomicManagement,44.9,30,5.728496021,16.4,Republicans,Political ability
+134,Ford,38,Republican,509,25,InternationalRelations,54.2,25,5.728496021,16.4,Republicans,Diplomacy
+135,Ford,38,Republican,509,25,MoralAuthority,57.9,23,5.728496021,16.4,Republicans,Morality
+136,Ford,38,Republican,509,25,PerformanceAtTime,53.8,25,5.728496021,16.4,Republicans,Traditional leadership
+137,Ford,38,Republican,509,25,PublicPersuasion,42.5,34,5.728496021,16.4,Republicans,Traditional leadership
+138,Ford,38,Republican,509,25,PursuedEqualJustice,53.1,14,5.728496021,16.4,Republicans,Equality
+139,Ford,38,Republican,509,25,RelationsWithCongress,54.9,19,5.728496021,16.4,Republicans,Political ability
+140,Ford,38,Republican,509,25,VisionAgenda,41.5,35,5.728496021,16.4,Republicans,Traditional leadership
+141,Garfield,20,Republican,481,29,AdministrativeSkills,48.8,32,4.158471942,14.7,Republicans,Political ability
+142,Garfield,20,Republican,481,29,CrisisLeadership,44.1,31,4.158471942,14.7,Republicans,Traditional leadership
+143,Garfield,20,Republican,481,29,EconomicManagement,46.1,29,4.158471942,14.7,Republicans,Political ability
+144,Garfield,20,Republican,481,29,InternationalRelations,43.4,36,4.158471942,14.7,Republicans,Diplomacy
+145,Garfield,20,Republican,481,29,MoralAuthority,58.1,22,4.158471942,14.7,Republicans,Morality
+146,Garfield,20,Republican,481,29,PerformanceAtTime,47.3,27,4.158471942,14.7,Republicans,Traditional leadership
+147,Garfield,20,Republican,481,29,PublicPersuasion,51.1,21,4.158471942,14.7,Republicans,Traditional leadership
+148,Garfield,20,Republican,481,29,PursuedEqualJustice,46.7,20,4.158471942,14.7,Republicans,Equality
+149,Garfield,20,Republican,481,29,RelationsWithCongress,48.6,27,4.158471942,14.7,Republicans,Political ability
+150,Garfield,20,Republican,481,29,VisionAgenda,47,25,4.158471942,14.7,Republicans,Traditional leadership
+151,Grant,18,Republican,557,22,AdministrativeSkills,40.8,37,7.355753606,23.2,The Others,Political ability
+152,Grant,18,Republican,557,22,CrisisLeadership,58.7,21,7.355753606,23.2,The Others,Traditional leadership
+153,Grant,18,Republican,557,22,EconomicManagement,47.1,27,7.355753606,23.2,The Others,Political ability
+154,Grant,18,Republican,557,22,InternationalRelations,60.4,19,7.355753606,23.2,The Others,Diplomacy
+155,Grant,18,Republican,557,22,MoralAuthority,61.4,19,7.355753606,23.2,The Others,Morality
+156,Grant,18,Republican,557,22,PerformanceAtTime,58,21,7.355753606,23.2,The Others,Traditional leadership
+157,Grant,18,Republican,557,22,PublicPersuasion,60.9,19,7.355753606,23.2,The Others,Traditional leadership
+158,Grant,18,Republican,557,22,PursuedEqualJustice,64,10,7.355753606,23.2,The Others,Equality
+159,Grant,18,Republican,557,22,RelationsWithCongress,54.6,20,7.355753606,23.2,The Others,Political ability
+160,Grant,18,Republican,557,22,VisionAgenda,50.7,23,7.355753606,23.2,The Others,Traditional leadership
+161,Harding,29,Republican,360,40,AdministrativeSkills,32.5,42,5.986985886,19.1,Unremarkables,Political ability
+162,Harding,29,Republican,360,40,CrisisLeadership,32.1,39,5.986985886,19.1,Unremarkables,Traditional leadership
+163,Harding,29,Republican,360,40,EconomicManagement,40.6,35,5.986985886,19.1,Unremarkables,Political ability
+164,Harding,29,Republican,360,40,InternationalRelations,42.1,37,5.986985886,19.1,Unremarkables,Diplomacy
+165,Harding,29,Republican,360,40,MoralAuthority,24.7,40,5.986985886,19.1,Unremarkables,Morality
+166,Harding,29,Republican,360,40,PerformanceAtTime,33.2,40,5.986985886,19.1,Unremarkables,Traditional leadership
+167,Harding,29,Republican,360,40,PublicPersuasion,41.4,36,5.986985886,19.1,Unremarkables,Traditional leadership
+168,Harding,29,Republican,360,40,PursuedEqualJustice,37,33,5.986985886,19.1,Unremarkables,Equality
+169,Harding,29,Republican,360,40,RelationsWithCongress,43.8,34,5.986985886,19.1,Unremarkables,Political ability
+170,Harding,29,Republican,360,40,VisionAgenda,32.8,40,5.986985886,19.1,Unremarkables,Traditional leadership
+171,"Harrison, B.",23,Republican,462,30,VisionAgenda,43.5,31,3.23666495,8.5,Republicans,Political ability
+172,"Harrison, B.",23,Republican,462,30,PursuedEqualJustice,43.8,24,3.23666495,8.5,Republicans,Traditional leadership
+173,"Harrison, B.",23,Republican,462,30,RelationsWithCongress,50.5,26,3.23666495,8.5,Republicans,Political ability
+174,"Harrison, B.",23,Republican,462,30,AdministrativeSkills,49.3,30,3.23666495,8.5,Republicans,Diplomacy
+175,"Harrison, B.",23,Republican,462,30,CrisisLeadership,42.5,33,3.23666495,8.5,Republicans,Morality
+176,"Harrison, B.",23,Republican,462,30,EconomicManagement,43.3,32,3.23666495,8.5,Republicans,Traditional leadership
+177,"Harrison, B.",23,Republican,462,30,InternationalRelations,51,27,3.23666495,8.5,Republicans,Traditional leadership
+178,"Harrison, B.",23,Republican,462,30,MoralAuthority,47.7,30,3.23666495,8.5,Republicans,Equality
+179,"Harrison, B.",23,Republican,462,30,PerformanceAtTime,46.2,31,3.23666495,8.5,Republicans,Political ability
+180,"Harrison, B.",23,Republican,462,30,PublicPersuasion,43.8,32,3.23666495,8.5,Republicans,Traditional leadership
+181,"Harrison, W. H.",9,Whig,383,38,AdministrativeSkills,34.5,40,5.585656233,16.2,Unremarkables,Political ability
+182,"Harrison, W. H.",9,Whig,383,38,CrisisLeadership,32.7,38,5.585656233,16.2,Unremarkables,Traditional leadership
+183,"Harrison, W. H.",9,Whig,383,38,EconomicManagement,37.8,38,5.585656233,16.2,Unremarkables,Political ability
+184,"Harrison, W. H.",9,Whig,383,38,InternationalRelations,34.3,42,5.585656233,16.2,Unremarkables,Diplomacy
+185,"Harrison, W. H.",9,Whig,383,38,MoralAuthority,46.9,31,5.585656233,16.2,Unremarkables,Morality
+186,"Harrison, W. H.",9,Whig,383,38,PerformanceAtTime,37.1,38,5.585656233,16.2,Unremarkables,Traditional leadership
+187,"Harrison, W. H.",9,Whig,383,38,PublicPersuasion,47.6,28,5.585656233,16.2,Unremarkables,Traditional leadership
+188,"Harrison, W. H.",9,Whig,383,38,PursuedEqualJustice,31.4,37,5.585656233,16.2,Unremarkables,Equality
+189,"Harrison, W. H.",9,Whig,383,38,RelationsWithCongress,40.5,38,5.585656233,16.2,Unremarkables,Political ability
+190,"Harrison, W. H.",9,Whig,383,38,VisionAgenda,40.4,36,5.585656233,16.2,Unremarkables,Traditional leadership
+191,Hayes,19,Republican,458,32,AdministrativeSkills,49.8,29,3.350107793,11.8,Republicans,Political ability
+192,Hayes,19,Republican,458,32,CrisisLeadership,45.7,30,3.350107793,11.8,Republicans,Traditional leadership
+193,Hayes,19,Republican,458,32,EconomicManagement,47.6,25,3.350107793,11.8,Republicans,Political ability
+194,Hayes,19,Republican,458,32,InternationalRelations,48.5,33,3.350107793,11.8,Republicans,Diplomacy
+195,Hayes,19,Republican,458,32,MoralAuthority,46.9,32,3.350107793,11.8,Republicans,Morality
+196,Hayes,19,Republican,458,32,PerformanceAtTime,47,28,3.350107793,11.8,Republicans,Traditional leadership
+197,Hayes,19,Republican,458,32,PublicPersuasion,46.1,29,3.350107793,11.8,Republicans,Traditional leadership
+198,Hayes,19,Republican,458,32,PursuedEqualJustice,38,32,3.350107793,11.8,Republicans,Equality
+199,Hayes,19,Republican,458,32,RelationsWithCongress,45.8,30,3.350107793,11.8,Republicans,Political ability
+200,Hayes,19,Republican,458,32,VisionAgenda,42.5,32,3.350107793,11.8,Republicans,Traditional leadership
+201,Hoover,31,Republican,416,36,AdministrativeSkills,64.7,14,10.72007463,36.3,Republicans,Political ability
+202,Hoover,31,Republican,416,36,CrisisLeadership,29.7,40,10.72007463,36.3,Republicans,Traditional leadership
+203,Hoover,31,Republican,416,36,EconomicManagement,28.4,43,10.72007463,36.3,Republicans,Political ability
+204,Hoover,31,Republican,416,36,InternationalRelations,49.6,31,10.72007463,36.3,Republicans,Diplomacy
+205,Hoover,31,Republican,416,36,MoralAuthority,48,29,10.72007463,36.3,Republicans,Morality
+206,Hoover,31,Republican,416,36,PerformanceAtTime,36.6,39,10.72007463,36.3,Republicans,Traditional leadership
+207,Hoover,31,Republican,416,36,PublicPersuasion,37,38,10.72007463,36.3,Republicans,Traditional leadership
+208,Hoover,31,Republican,416,36,PursuedEqualJustice,40,28,10.72007463,36.3,Republicans,Equality
+209,Hoover,31,Republican,416,36,RelationsWithCongress,44.9,31,10.72007463,36.3,Republicans,Political ability
+210,Hoover,31,Republican,416,36,VisionAgenda,37.1,38,10.72007463,36.3,Republicans,Traditional leadership
+211,Jackson,7,Democratic,609,18,AdministrativeSkills,56.5,23,15.39498114,51,Expansionists,Political ability
+212,Jackson,7,Democratic,609,18,CrisisLeadership,73.5,10,15.39498114,51,Expansionists,Traditional leadership
+213,Jackson,7,Democratic,609,18,EconomicManagement,47.6,26,15.39498114,51,Expansionists,Political ability
+214,Jackson,7,Democratic,609,18,InternationalRelations,58,20,15.39498114,51,Expansionists,Diplomacy
+215,Jackson,7,Democratic,609,18,MoralAuthority,59.3,20,15.39498114,51,Expansionists,Morality
+216,Jackson,7,Democratic,609,18,PerformanceAtTime,68.1,13,15.39498114,51,Expansionists,Traditional leadership
+217,Jackson,7,Democratic,609,18,PublicPersuasion,82.2,7,15.39498114,51,Expansionists,Traditional leadership
+218,Jackson,7,Democratic,609,18,PursuedEqualJustice,31.2,38,15.39498114,51,Expansionists,Equality
+219,Jackson,7,Democratic,609,18,RelationsWithCongress,53.7,21,15.39498114,51,Expansionists,Political ability
+220,Jackson,7,Democratic,609,18,VisionAgenda,79,10,15.39498114,51,Expansionists,Traditional leadership
+221,Jefferson,3,Democratic-Republican,727,7,AdministrativeSkills,71.8,7,10.9516919,39.4,Expansionists,Political ability
+222,Jefferson,3,Democratic-Republican,727,7,CrisisLeadership,72.4,13,10.9516919,39.4,Expansionists,Traditional leadership
+223,Jefferson,3,Democratic-Republican,727,7,EconomicManagement,63.3,13,10.9516919,39.4,Expansionists,Political ability
+224,Jefferson,3,Democratic-Republican,727,7,InternationalRelations,71.5,11,10.9516919,39.4,Expansionists,Diplomacy
+225,Jefferson,3,Democratic-Republican,727,7,MoralAuthority,78.5,6,10.9516919,39.4,Expansionists,Morality
+226,Jefferson,3,Democratic-Republican,727,7,PerformanceAtTime,78.6,6,10.9516919,39.4,Expansionists,Traditional leadership
+227,Jefferson,3,Democratic-Republican,727,7,PublicPersuasion,82.1,8,10.9516919,39.4,Expansionists,Traditional leadership
+228,Jefferson,3,Democratic-Republican,727,7,PursuedEqualJustice,47.8,17,10.9516919,39.4,Expansionists,Equality
+229,Jefferson,3,Democratic-Republican,727,7,RelationsWithCongress,74,5,10.9516919,39.4,Expansionists,Political ability
+230,Jefferson,3,Democratic-Republican,727,7,VisionAgenda,87.2,5,10.9516919,39.4,Expansionists,Traditional leadership
+231,"Johnson, A.",17,Democratic,275,42,AdministrativeSkills,28.5,43,6.767044324,23,Unremarkables,Political ability
+232,"Johnson, A.",17,Democratic,275,42,CrisisLeadership,25.3,42,6.767044324,23,Unremarkables,Traditional leadership
+233,"Johnson, A.",17,Democratic,275,42,EconomicManagement,38,37,6.767044324,23,Unremarkables,Political ability
+234,"Johnson, A.",17,Democratic,275,42,InternationalRelations,40.1,39,6.767044324,23,Unremarkables,Diplomacy
+235,"Johnson, A.",17,Democratic,275,42,MoralAuthority,24.3,41,6.767044324,23,Unremarkables,Morality
+236,"Johnson, A.",17,Democratic,275,42,PerformanceAtTime,26.3,42,6.767044324,23,Unremarkables,Traditional leadership
+237,"Johnson, A.",17,Democratic,275,42,PublicPersuasion,24.9,42,6.767044324,23,Unremarkables,Traditional leadership
+238,"Johnson, A.",17,Democratic,275,42,PursuedEqualJustice,24.5,40,6.767044324,23,Unremarkables,Equality
+239,"Johnson, A.",17,Democratic,275,42,RelationsWithCongress,17.1,43,6.767044324,23,Unremarkables,Political ability
+240,"Johnson, A.",17,Democratic,275,42,VisionAgenda,26.2,42,6.767044324,23,Unremarkables,Traditional leadership
+241,"Johnson, L. B.",36,Democratic,687,10,AdministrativeSkills,72.3,6,14.41800186,50,Social Democrats,Political ability
+242,"Johnson, L. B.",36,Democratic,687,10,CrisisLeadership,59.7,20,14.41800186,50,Social Democrats,Traditional leadership
+243,"Johnson, L. B.",36,Democratic,687,10,EconomicManagement,63.9,12,14.41800186,50,Social Democrats,Political ability
+244,"Johnson, L. B.",36,Democratic,687,10,InternationalRelations,41.5,38,14.41800186,50,Social Democrats,Diplomacy
+245,"Johnson, L. B.",36,Democratic,687,10,MoralAuthority,57.8,24,14.41800186,50,Social Democrats,Morality
+246,"Johnson, L. B.",36,Democratic,687,10,PerformanceAtTime,68,14,14.41800186,50,Social Democrats,Traditional leadership
+247,"Johnson, L. B.",36,Democratic,687,10,PublicPersuasion,67.5,15,14.41800186,50,Social Democrats,Traditional leadership
+248,"Johnson, L. B.",36,Democratic,687,10,PursuedEqualJustice,91.5,2,14.41800186,50,Social Democrats,Equality
+249,"Johnson, L. B.",36,Democratic,687,10,RelationsWithCongress,83,1,14.41800186,50,Social Democrats,Political ability
+250,"Johnson, L. B.",36,Democratic,687,10,VisionAgenda,81.7,8,14.41800186,50,Social Democrats,Traditional leadership
+251,Kennedy,35,Democratic,722,8,AdministrativeSkills,63.3,15,7.924112288,25.1,War-timers,Political ability
+252,Kennedy,35,Democratic,722,8,CrisisLeadership,79.4,7,7.924112288,25.1,War-timers,Traditional leadership
+253,Kennedy,35,Democratic,722,8,EconomicManagement,70.7,7,7.924112288,25.1,War-timers,Political ability
+254,Kennedy,35,Democratic,722,8,InternationalRelations,69.5,14,7.924112288,25.1,War-timers,Diplomacy
+255,Kennedy,35,Democratic,722,8,MoralAuthority,66.9,15,7.924112288,25.1,War-timers,Morality
+256,Kennedy,35,Democratic,722,8,PerformanceAtTime,72.5,9,7.924112288,25.1,War-timers,Traditional leadership
+257,Kennedy,35,Democratic,722,8,PublicPersuasion,86.4,6,7.924112288,25.1,War-timers,Traditional leadership
+258,Kennedy,35,Democratic,722,8,PursuedEqualJustice,71.7,7,7.924112288,25.1,War-timers,Equality
+259,Kennedy,35,Democratic,722,8,RelationsWithCongress,61.3,12,7.924112288,25.1,War-timers,Political ability
+260,Kennedy,35,Democratic,722,8,VisionAgenda,80.9,9,7.924112288,25.1,War-timers,Traditional leadership
+261,Lincoln,16,Republican,907,1,AdministrativeSkills,85.6,1,7.022535155,18.3,All-stars,Political ability
+262,Lincoln,16,Republican,907,1,CrisisLeadership,97.8,1,7.022535155,18.3,All-stars,Traditional leadership
+263,Lincoln,16,Republican,907,1,EconomicManagement,80.9,2,7.022535155,18.3,All-stars,Political ability
+264,Lincoln,16,Republican,907,1,InternationalRelations,86.4,3,7.022535155,18.3,All-stars,Diplomacy
+265,Lincoln,16,Republican,907,1,MoralAuthority,96.2,2,7.022535155,18.3,All-stars,Morality
+266,Lincoln,16,Republican,907,1,PerformanceAtTime,97.1,2,7.022535155,18.3,All-stars,Traditional leadership
+267,Lincoln,16,Republican,907,1,PublicPersuasion,92.4,3,7.022535155,18.3,All-stars,Traditional leadership
+268,Lincoln,16,Republican,907,1,PursuedEqualJustice,93.1,1,7.022535155,18.3,All-stars,Equality
+269,Lincoln,16,Republican,907,1,RelationsWithCongress,79.5,4,7.022535155,18.3,All-stars,Political ability
+270,Lincoln,16,Republican,907,1,VisionAgenda,97.6,1,7.022535155,18.3,All-stars,Traditional leadership
+271,Madison,4,Democratic-Republican,610,17,AdministrativeSkills,62.7,17,6.659462774,25.7,The Others,Political ability
+272,Madison,4,Democratic-Republican,610,17,CrisisLeadership,60.4,19,6.659462774,25.7,The Others,Traditional leadership
+273,Madison,4,Democratic-Republican,610,17,EconomicManagement,57.9,19,6.659462774,25.7,The Others,Political ability
+274,Madison,4,Democratic-Republican,610,17,InternationalRelations,56.9,22,6.659462774,25.7,The Others,Diplomacy
+275,Madison,4,Democratic-Republican,610,17,MoralAuthority,72.9,9,6.659462774,25.7,The Others,Morality
+276,Madison,4,Democratic-Republican,610,17,PerformanceAtTime,66.4,16,6.659462774,25.7,The Others,Traditional leadership
+277,Madison,4,Democratic-Republican,610,17,PublicPersuasion,62.3,18,6.659462774,25.7,The Others,Traditional leadership
+278,Madison,4,Democratic-Republican,610,17,PursuedEqualJustice,47.2,18,6.659462774,25.7,The Others,Equality
+279,Madison,4,Democratic-Republican,610,17,RelationsWithCongress,60.1,13,6.659462774,25.7,The Others,Political ability
+280,Madison,4,Democratic-Republican,610,17,VisionAgenda,63.4,18,6.659462774,25.7,The Others,Traditional leadership
+281,McKinley,25,Republican,627,16,AdministrativeSkills,65.4,13,7.563479505,26,Expansionists,Political ability
+282,McKinley,25,Republican,627,16,CrisisLeadership,64.8,16,7.563479505,26,Expansionists,Traditional leadership
+283,McKinley,25,Republican,627,16,EconomicManagement,64.3,11,7.563479505,26,Expansionists,Political ability
+284,McKinley,25,Republican,627,16,InternationalRelations,65.5,17,7.563479505,26,Expansionists,Diplomacy
+285,McKinley,25,Republican,627,16,MoralAuthority,63.5,18,7.563479505,26,Expansionists,Morality
+286,McKinley,25,Republican,627,16,PerformanceAtTime,65.4,18,7.563479505,26,Expansionists,Traditional leadership
+287,McKinley,25,Republican,627,16,PublicPersuasion,67.4,16,7.563479505,26,Expansionists,Traditional leadership
+288,McKinley,25,Republican,627,16,PursuedEqualJustice,41.4,26,7.563479505,26,Expansionists,Equality
+289,McKinley,25,Republican,627,16,RelationsWithCongress,65.6,10,7.563479505,26,Expansionists,Political ability
+290,McKinley,25,Republican,627,16,VisionAgenda,63.5,17,7.563479505,26,Expansionists,Traditional leadership
+291,Monroe,5,Democratic-Republican,646,13,AdministrativeSkills,66.4,11,9.131684766,36,Expansionists,Political ability
+292,Monroe,5,Democratic-Republican,646,13,CrisisLeadership,66.1,14,9.131684766,36,Expansionists,Traditional leadership
+293,Monroe,5,Democratic-Republican,646,13,EconomicManagement,58,18,9.131684766,36,Expansionists,Political ability
+294,Monroe,5,Democratic-Republican,646,13,InternationalRelations,79.5,7,9.131684766,36,Expansionists,Diplomacy
+295,Monroe,5,Democratic-Republican,646,13,MoralAuthority,66.2,16,9.131684766,36,Expansionists,Morality
+296,Monroe,5,Democratic-Republican,646,13,PerformanceAtTime,69.9,11,9.131684766,36,Expansionists,Traditional leadership
+297,Monroe,5,Democratic-Republican,646,13,PublicPersuasion,64.5,17,9.131684766,36,Expansionists,Traditional leadership
+298,Monroe,5,Democratic-Republican,646,13,PursuedEqualJustice,43.5,25,9.131684766,36,Expansionists,Equality
+299,Monroe,5,Democratic-Republican,646,13,RelationsWithCongress,66.2,9,9.131684766,36,Expansionists,Political ability
+300,Monroe,5,Democratic-Republican,646,13,VisionAgenda,65.6,14,9.131684766,36,Expansionists,Traditional leadership
+301,Nixon,37,Republican,486,28,AdministrativeSkills,56.5,24,12.28019634,49.3,Republicans,Political ability
+302,Nixon,37,Republican,486,28,CrisisLeadership,49.1,27,12.28019634,49.3,Republicans,Traditional leadership
+303,Nixon,37,Republican,486,28,EconomicManagement,52.6,23,12.28019634,49.3,Republicans,Political ability
+304,Nixon,37,Republican,486,28,InternationalRelations,72.3,10,12.28019634,49.3,Republicans,Diplomacy
+305,Nixon,37,Republican,486,28,MoralAuthority,23,42,12.28019634,49.3,Republicans,Morality
+306,Nixon,37,Republican,486,28,PerformanceAtTime,44,34,12.28019634,49.3,Republicans,Traditional leadership
+307,Nixon,37,Republican,486,28,PublicPersuasion,49,26,12.28019634,49.3,Republicans,Traditional leadership
+308,Nixon,37,Republican,486,28,PursuedEqualJustice,46.6,21,12.28019634,49.3,Republicans,Equality
+309,Nixon,37,Republican,486,28,RelationsWithCongress,42.8,37,12.28019634,49.3,Republicans,Political ability
+310,Nixon,37,Republican,486,28,VisionAgenda,50.2,24,12.28019634,49.3,Republicans,Traditional leadership
+311,Obama,44,Democratic,669,12,AdministrativeSkills,61.3,19,13.19639681,45.4,Social Democrats,Political ability
+312,Obama,44,Democratic,669,12,CrisisLeadership,65.4,15,13.19639681,45.4,Social Democrats,Traditional leadership
+313,Obama,44,Democratic,669,12,EconomicManagement,69.6,8,13.19639681,45.4,Social Democrats,Political ability
+314,Obama,44,Democratic,669,12,InternationalRelations,55.1,24,13.19639681,45.4,Social Democrats,Diplomacy
+315,Obama,44,Democratic,669,12,MoralAuthority,77.5,7,13.19639681,45.4,Social Democrats,Morality
+316,Obama,44,Democratic,669,12,PerformanceAtTime,67.5,15,13.19639681,45.4,Social Democrats,Traditional leadership
+317,Obama,44,Democratic,669,12,PublicPersuasion,77.9,10,13.19639681,45.4,Social Democrats,Traditional leadership
+318,Obama,44,Democratic,669,12,PursuedEqualJustice,83.2,3,13.19639681,45.4,Social Democrats,Equality
+319,Obama,44,Democratic,669,12,RelationsWithCongress,37.8,39,13.19639681,45.4,Social Democrats,Political ability
+320,Obama,44,Democratic,669,12,VisionAgenda,73.3,12,13.19639681,45.4,Social Democrats,Traditional leadership
+321,Pierce,14,Democratic,315,41,AdministrativeSkills,36.7,39,5.19582097,14.9,Unremarkables,Political ability
+322,Pierce,14,Democratic,315,41,CrisisLeadership,26.9,41,5.19582097,14.9,Unremarkables,Traditional leadership
+323,Pierce,14,Democratic,315,41,EconomicManagement,36.6,41,5.19582097,14.9,Unremarkables,Political ability
+324,Pierce,14,Democratic,315,41,InternationalRelations,37.5,40,5.19582097,14.9,Unremarkables,Diplomacy
+325,Pierce,14,Democratic,315,41,MoralAuthority,29.6,39,5.19582097,14.9,Unremarkables,Morality
+326,Pierce,14,Democratic,315,41,PerformanceAtTime,28.8,41,5.19582097,14.9,Unremarkables,Traditional leadership
+327,Pierce,14,Democratic,315,41,PublicPersuasion,32.3,41,5.19582097,14.9,Unremarkables,Traditional leadership
+328,Pierce,14,Democratic,315,41,PursuedEqualJustice,22.6,42,5.19582097,14.9,Unremarkables,Equality
+329,Pierce,14,Democratic,315,41,RelationsWithCongress,36.6,40,5.19582097,14.9,Unremarkables,Political ability
+330,Pierce,14,Democratic,315,41,VisionAgenda,27.5,41,5.19582097,14.9,Unremarkables,Traditional leadership
+331,Polk,11,Democratic,637,14,AdministrativeSkills,69,9,12.78377444,44.5,Expansionists,Political ability
+332,Polk,11,Democratic,637,14,CrisisLeadership,73.8,9,12.78377444,44.5,Expansionists,Traditional leadership
+333,Polk,11,Democratic,637,14,EconomicManagement,63.2,14,12.78377444,44.5,Expansionists,Political ability
+334,Polk,11,Democratic,637,14,InternationalRelations,67.5,16,12.78377444,44.5,Expansionists,Diplomacy
+335,Polk,11,Democratic,637,14,MoralAuthority,53.2,27,12.78377444,44.5,Expansionists,Morality
+336,Polk,11,Democratic,637,14,PerformanceAtTime,68.6,12,12.78377444,44.5,Expansionists,Traditional leadership
+337,Polk,11,Democratic,637,14,PublicPersuasion,68.8,13,12.78377444,44.5,Expansionists,Traditional leadership
+338,Polk,11,Democratic,637,14,PursuedEqualJustice,32.1,36,12.78377444,44.5,Expansionists,Equality
+339,Polk,11,Democratic,637,14,RelationsWithCongress,64.6,11,12.78377444,44.5,Expansionists,Political ability
+340,Polk,11,Democratic,637,14,VisionAgenda,76.6,11,12.78377444,44.5,Expansionists,Traditional leadership
+341,Reagan,40,Republican,691,9,AdministrativeSkills,47.4,33,14.80489409,46.3,Expansionists,Political ability
+342,Reagan,40,Republican,691,9,CrisisLeadership,74.1,8,14.80489409,46.3,Expansionists,Traditional leadership
+343,Reagan,40,Republican,691,9,EconomicManagement,60.9,16,14.80489409,46.3,Expansionists,Political ability
+344,Reagan,40,Republican,691,9,InternationalRelations,76.8,9,14.80489409,46.3,Expansionists,Diplomacy
+345,Reagan,40,Republican,691,9,MoralAuthority,68.8,13,14.80489409,46.3,Expansionists,Morality
+346,Reagan,40,Republican,691,9,PerformanceAtTime,74.1,8,14.80489409,46.3,Expansionists,Traditional leadership
+347,Reagan,40,Republican,691,9,PublicPersuasion,90.9,5,14.80489409,46.3,Expansionists,Traditional leadership
+348,Reagan,40,Republican,691,9,PursuedEqualJustice,44.6,23,14.80489409,46.3,Expansionists,Equality
+349,Reagan,40,Republican,691,9,RelationsWithCongress,68.9,8,14.80489409,46.3,Expansionists,Political ability
+350,Reagan,40,Republican,691,9,VisionAgenda,84.9,6,14.80489409,46.3,Expansionists,Traditional leadership
+351,"Roosevelt, F. D.",32,Democratic,855,3,AdministrativeSkills,79.1,3,9.204226083,28,All-stars,Political ability
+352,"Roosevelt, F. D.",32,Democratic,855,3,CrisisLeadership,94.1,3,9.204226083,28,All-stars,Traditional leadership
+353,"Roosevelt, F. D.",32,Democratic,855,3,EconomicManagement,75.7,5,9.204226083,28,All-stars,Political ability
+354,"Roosevelt, F. D.",32,Democratic,855,3,InternationalRelations,89.7,1,9.204226083,28,All-stars,Diplomacy
+355,"Roosevelt, F. D.",32,Democratic,855,3,MoralAuthority,85.7,3,9.204226083,28,All-stars,Morality
+356,"Roosevelt, F. D.",32,Democratic,855,3,PerformanceAtTime,92.3,3,9.204226083,28,All-stars,Traditional leadership
+357,"Roosevelt, F. D.",32,Democratic,855,3,PublicPersuasion,96.8,1,9.204226083,28,All-stars,Traditional leadership
+358,"Roosevelt, F. D.",32,Democratic,855,3,PursuedEqualJustice,68.8,8,9.204226083,28,All-stars,Equality
+359,"Roosevelt, F. D.",32,Democratic,855,3,RelationsWithCongress,80.1,3,9.204226083,28,All-stars,Political ability
+360,"Roosevelt, F. D.",32,Democratic,855,3,VisionAgenda,92.7,3,9.204226083,28,All-stars,Traditional leadership
+361,"Roosevelt, T.",26,Republican,807,4,AdministrativeSkills,78.8,4,8.591623828,29.8,All-stars,Political ability
+362,"Roosevelt, T.",26,Republican,807,4,CrisisLeadership,83.5,5,8.591623828,29.8,All-stars,Traditional leadership
+363,"Roosevelt, T.",26,Republican,807,4,EconomicManagement,76.2,4,8.591623828,29.8,All-stars,Political ability
+364,"Roosevelt, T.",26,Republican,807,4,InternationalRelations,84.4,4,8.591623828,29.8,All-stars,Diplomacy
+365,"Roosevelt, T.",26,Republican,807,4,MoralAuthority,84.1,5,8.591623828,29.8,All-stars,Morality
+366,"Roosevelt, T.",26,Republican,807,4,PerformanceAtTime,85.4,4,8.591623828,29.8,All-stars,Traditional leadership
+367,"Roosevelt, T.",26,Republican,807,4,PublicPersuasion,92.6,2,8.591623828,29.8,All-stars,Traditional leadership
+368,"Roosevelt, T.",26,Republican,807,4,PursuedEqualJustice,62.8,11,8.591623828,29.8,All-stars,Equality
+369,"Roosevelt, T.",26,Republican,807,4,RelationsWithCongress,72,7,8.591623828,29.8,All-stars,Political ability
+370,"Roosevelt, T.",26,Republican,807,4,VisionAgenda,87.6,4,8.591623828,29.8,All-stars,Traditional leadership
+371,Taft,27,Republican,528,24,AdministrativeSkills,65.8,12,6.661497996,21.1,Republicans,Political ability
+372,Taft,27,Republican,528,24,CrisisLeadership,49.9,26,6.661497996,21.1,Republicans,Traditional leadership
+373,Taft,27,Republican,528,24,EconomicManagement,55.2,20,6.661497996,21.1,Republicans,Political ability
+374,Taft,27,Republican,528,24,InternationalRelations,57.8,21,6.661497996,21.1,Republicans,Diplomacy
+375,Taft,27,Republican,528,24,MoralAuthority,56.7,25,6.661497996,21.1,Republicans,Morality
+376,Taft,27,Republican,528,24,PerformanceAtTime,54.6,24,6.661497996,21.1,Republicans,Traditional leadership
+377,Taft,27,Republican,528,24,PublicPersuasion,45.1,31,6.661497996,21.1,Republicans,Traditional leadership
+378,Taft,27,Republican,528,24,PursuedEqualJustice,44.7,22,6.661497996,21.1,Republicans,Equality
+379,Taft,27,Republican,528,24,RelationsWithCongress,52.3,23,6.661497996,21.1,Republicans,Political ability
+380,Taft,27,Republican,528,24,VisionAgenda,45.9,28,6.661497996,21.1,Republicans,Traditional leadership
+381,Taylor,12,Whig,458,31,AdministrativeSkills,45.2,35,4.124466295,14.7,Republicans,Political ability
+382,Taylor,12,Whig,458,31,CrisisLeadership,47.6,28,4.124466295,14.7,Republicans,Traditional leadership
+383,Taylor,12,Whig,458,31,EconomicManagement,46.1,28,4.124466295,14.7,Republicans,Political ability
+384,Taylor,12,Whig,458,31,InternationalRelations,49.7,30,4.124466295,14.7,Republicans,Diplomacy
+385,Taylor,12,Whig,458,31,MoralAuthority,51,28,4.124466295,14.7,Republicans,Morality
+386,Taylor,12,Whig,458,31,PerformanceAtTime,46.5,30,4.124466295,14.7,Republicans,Traditional leadership
+387,Taylor,12,Whig,458,31,PublicPersuasion,48.5,27,4.124466295,14.7,Republicans,Traditional leadership
+388,Taylor,12,Whig,458,31,PursuedEqualJustice,36.3,34,4.124466295,14.7,Republicans,Equality
+389,Taylor,12,Whig,458,31,RelationsWithCongress,43.3,35,4.124466295,14.7,Republicans,Political ability
+390,Taylor,12,Whig,458,31,VisionAgenda,44.1,30,4.124466295,14.7,Republicans,Traditional leadership
+391,Truman,33,Democratic,737,6,AdministrativeSkills,67.5,10,8.59989664,27.2,War-timers,Political ability
+392,Truman,33,Democratic,737,6,CrisisLeadership,85.1,4,8.59989664,27.2,War-timers,Traditional leadership
+393,Truman,33,Democratic,737,6,EconomicManagement,68.8,10,8.59989664,27.2,War-timers,Political ability
+394,Truman,33,Democratic,737,6,InternationalRelations,82.6,5,8.59989664,27.2,War-timers,Diplomacy
+395,Truman,33,Democratic,737,6,MoralAuthority,72.8,10,8.59989664,27.2,War-timers,Morality
+396,Truman,33,Democratic,737,6,PerformanceAtTime,80.7,5,8.59989664,27.2,War-timers,Traditional leadership
+397,Truman,33,Democratic,737,6,PublicPersuasion,67.8,14,8.59989664,27.2,War-timers,Traditional leadership
+398,Truman,33,Democratic,737,6,PursuedEqualJustice,81.4,4,8.59989664,27.2,War-timers,Equality
+399,Truman,33,Democratic,737,6,RelationsWithCongress,57.9,14,8.59989664,27.2,War-timers,Political ability
+400,Truman,33,Democratic,737,6,VisionAgenda,73,13,8.59989664,27.2,War-timers,Traditional leadership
+401,Tyler,10,Whig,372,39,AdministrativeSkills,40.6,38,6.890742582,26.8,Unremarkables,Political ability
+402,Tyler,10,Whig,372,39,CrisisLeadership,40.1,36,6.890742582,26.8,Unremarkables,Traditional leadership
+403,Tyler,10,Whig,372,39,EconomicManagement,37.7,39,6.890742582,26.8,Unremarkables,Political ability
+404,Tyler,10,Whig,372,39,InternationalRelations,50.9,28,6.890742582,26.8,Unremarkables,Diplomacy
+405,Tyler,10,Whig,372,39,MoralAuthority,34.7,37,6.890742582,26.8,Unremarkables,Morality
+406,Tyler,10,Whig,372,39,PerformanceAtTime,38.9,36,6.890742582,26.8,Unremarkables,Traditional leadership
+407,Tyler,10,Whig,372,39,PublicPersuasion,36.8,39,6.890742582,26.8,Unremarkables,Traditional leadership
+408,Tyler,10,Whig,372,39,PursuedEqualJustice,24.1,41,6.890742582,26.8,Unremarkables,Equality
+409,Tyler,10,Whig,372,39,RelationsWithCongress,31,41,6.890742582,26.8,Unremarkables,Political ability
+410,Tyler,10,Whig,372,39,VisionAgenda,37.5,37,6.890742582,26.8,Unremarkables,Traditional leadership
+411,Van Buren,8,Democratic,450,34,AdministrativeSkills,55.1,26,5.537508465,18,Republicans,Political ability
+412,Van Buren,8,Democratic,450,34,CrisisLeadership,41.1,35,5.537508465,18,Republicans,Traditional leadership
+413,Van Buren,8,Democratic,450,34,EconomicManagement,37.1,40,5.537508465,18,Republicans,Political ability
+414,Van Buren,8,Democratic,450,34,InternationalRelations,51,26,5.537508465,18,Republicans,Diplomacy
+415,Van Buren,8,Democratic,450,34,MoralAuthority,46.8,33,5.537508465,18,Republicans,Morality
+416,Van Buren,8,Democratic,450,34,PerformanceAtTime,44.5,33,5.537508465,18,Republicans,Traditional leadership
+417,Van Buren,8,Democratic,450,34,PublicPersuasion,46,30,5.537508465,18,Republicans,Traditional leadership
+418,Van Buren,8,Democratic,450,34,PursuedEqualJustice,38.9,30,5.537508465,18,Republicans,Equality
+419,Van Buren,8,Democratic,450,34,RelationsWithCongress,47.9,28,5.537508465,18,Republicans,Political ability
+420,Van Buren,8,Democratic,450,34,VisionAgenda,41.8,33,5.537508465,18,Republicans,Traditional leadership
+421,Washington,1,Unaffiliated,868,2,AdministrativeSkills,84.7,2,12.60045855,43.3,All-stars,Political ability
+422,Washington,1,Unaffiliated,868,2,CrisisLeadership,94.1,2,12.60045855,43.3,All-stars,Traditional leadership
+423,Washington,1,Unaffiliated,868,2,EconomicManagement,84.1,1,12.60045855,43.3,All-stars,Political ability
+424,Washington,1,Unaffiliated,868,2,InternationalRelations,87.6,2,12.60045855,43.3,All-stars,Diplomacy
+425,Washington,1,Unaffiliated,868,2,MoralAuthority,97.6,1,12.60045855,43.3,All-stars,Morality
+426,Washington,1,Unaffiliated,868,2,PerformanceAtTime,97.7,1,12.60045855,43.3,All-stars,Traditional leadership
+427,Washington,1,Unaffiliated,868,2,PublicPersuasion,91.4,4,12.60045855,43.3,All-stars,Traditional leadership
+428,Washington,1,Unaffiliated,868,2,PursuedEqualJustice,54.4,13,12.60045855,43.3,All-stars,Equality
+429,Washington,1,Unaffiliated,868,2,RelationsWithCongress,82.8,2,12.60045855,43.3,All-stars,Political ability
+430,Washington,1,Unaffiliated,868,2,VisionAgenda,93.2,2,12.60045855,43.3,All-stars,Traditional leadership
+431,Wilson,28,Democratic,683,11,AdministrativeSkills,70,8,13.37616454,46.8,Expansionists,Political ability
+432,Wilson,28,Democratic,683,11,CrisisLeadership,73.4,11,13.37616454,46.8,Expansionists,Traditional leadership
+433,Wilson,28,Democratic,683,11,EconomicManagement,69.5,9,13.37616454,46.8,Expansionists,Political ability
+434,Wilson,28,Democratic,683,11,InternationalRelations,71.3,12,13.37616454,46.8,Expansionists,Diplomacy
+435,Wilson,28,Democratic,683,11,MoralAuthority,75.7,8,13.37616454,46.8,Expansionists,Morality
+436,Wilson,28,Democratic,683,11,PerformanceAtTime,71.1,10,13.37616454,46.8,Expansionists,Traditional leadership
+437,Wilson,28,Democratic,683,11,PublicPersuasion,77.8,11,13.37616454,46.8,Expansionists,Traditional leadership
+438,Wilson,28,Democratic,683,11,PursuedEqualJustice,36.2,35,13.37616454,46.8,Expansionists,Equality
+439,Wilson,28,Democratic,683,11,RelationsWithCongress,55.2,16,13.37616454,46.8,Expansionists,Political ability
+440,Wilson,28,Democratic,683,11,VisionAgenda,83,7,13.37616454,46.8,Expansionists,Traditional leadership
