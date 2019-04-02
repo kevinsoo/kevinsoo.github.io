@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on Casual Inference</title>
+    <link>/tags/news/</link>
+    <description>Recent content in News on Casual Inference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The world (is going up in flames)</title>
+      <link>/2018/02/11/the-world-is-going-up-in-flames/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/11/the-world-is-going-up-in-flames/</guid>
+      <description>This song by the late, great Charles Bradley had me wondering: Is the world getting more peaceful, or is it increasingly conflict-ridden? Are there changes in the types of conflicts that flare up today compared to the past? These questions led me to explore the Social, Political and Economic Event Database (SPEED), which contains instances of unrest between 1946 and 2005 (post-WW2). The dataset records 62,141 instances of conflict, with information about time, initiators, targets, sources, and many other interesting variables related to the conflicts.</description>
+    </item>
+    
+  </channel>
+</rss>

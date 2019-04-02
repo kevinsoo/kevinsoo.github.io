@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Casual Inference</title>
+    <link>/</link>
+    <description>Recent content on Casual Inference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hello, I&amp;rsquo;m Kevin. I&amp;rsquo;m a Data Scientist at Civis Analytics. I use computational methods to answer questions and propose solutions to problems faced by the public sector.
+In my former life, I completed a PhD in cognitive psychology at the University of Pittsburgh. I researched how people made inferences about cause-effect relationships, referred to as causal reasoning (commonly mistaken for &amp;ldquo;casual&amp;rdquo; reasoning). You can read about my academic work here.</description>
+    </item>
+    
+    <item>
+      <title>Academic</title>
+      <link>/academic/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/academic/</guid>
+      <description>As a graduate student, I worked with Benjamin Rottman at the University of Pittsburgh. I used a combination of behavioral experiments and computational modeling to investigate human learning, reasoning, and decision-making. In particular, I focused on how people made causal inferences from data.
+Publications  Soo, K. W. &amp;amp; Rottman, B. M. (under review). Causal learning from time-series graphs with trends. Soo, K. W. &amp;amp; Rottman, B. M. (2018). Causal strength induction from time series data.</description>
+    </item>
+    
+    <item>
+      <title>Hello, world</title>
+      <link>/2019/03/30/hello-world/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/30/hello-world/</guid>
+      <description>I’ve converted my blog to use R’s Blogdown package, which will allow me to publish my writing directly from R Markdown. I’m hoping this will simplify the publishing pipeline and allow me to write more frequently. To start with, I’m going to upload my old posts.</description>
+    </item>
+    
+    <item>
+      <title>National Park trails</title>
+      <link>/2018/06/26/national-park-trails/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/26/national-park-trails/</guid>
+      <description>I love exploring the National Parks. Different parks contain different collections of hikes. I typically choose which park to visit based on a combination of sights I want to see and logistical constraints (e.g., travel time, cost, availability of campsites).
+Once I’ve chosen a park to visit, I choose a set of trails to hike based on how much time/fitness I have (choosing hikes with distance and elevation gain within a certain range), with the goal of fitting in as many hikes as possible during my stay.</description>
+    </item>
+    
+    <item>
+      <title>GE14: A statistical snapshot</title>
+      <link>/2018/05/15/ge14-a-statistical-snapshot/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/05/15/ge14-a-statistical-snapshot/</guid>
+      <description>Malaysia held its 14th General Election (GE14) on May 9, 2018. The opposition Pakatan Harapan (PH, translation: Coalition of Hope) won control of the federal government over Barisan Nasional (BN, translation: National Front). There are many reasons why this was a remarkable outcome. I don’t intend to expand on these, but here are a couple worth mentioning:
+ The BN has ruled Malaysia since its independence in 1957. As a result, Malaysia’s democracy is flawed (e.</description>
+    </item>
+    
+    <item>
+      <title>The world (is going up in flames)</title>
+      <link>/2018/02/11/the-world-is-going-up-in-flames/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/11/the-world-is-going-up-in-flames/</guid>
+      <description>This song by the late, great Charles Bradley had me wondering: Is the world getting more peaceful, or is it increasingly conflict-ridden? Are there changes in the types of conflicts that flare up today compared to the past? These questions led me to explore the Social, Political and Economic Event Database (SPEED), which contains instances of unrest between 1946 and 2005 (post-WW2). The dataset records 62,141 instances of conflict, with information about time, initiators, targets, sources, and many other interesting variables related to the conflicts.</description>
+    </item>
+    
+    <item>
+      <title>Fantasy Football season in review (2017-2018)</title>
+      <link>/2017/12/10/fantasy-football-season-in-review-2017-2018/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/10/fantasy-football-season-in-review-2017-2018/</guid>
+      <description>This season, a friend invited me to join his family’s Fantasy Football league, which gave me a chance to dabble in analytics. Prior to this season, I’ve been more interested in American Football the band than the sport.
+I know people who make fantasy football decisions for non-rational reasons (e.g. choosing players out of loyalty). On the other hand, I also know those who use their intimate knowledge of the sport to take into account relevant information a novice like me might overlook (e.</description>
+    </item>
+    
+    <item>
+      <title>National Park visits</title>
+      <link>/2017/06/30/national-park-visits/</link>
+      <pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/30/national-park-visits/</guid>
+      <description>Last year, the National Park Service celebrated its 100th anniversary. I’ve had the privilege to camp at several of them in the last few years (you can see photos I’ve taken on some of my travels here), and I’ll be going to Rocky Mountain National Park in Colorado this Summer.
+Growing popularity I think the National Parks are the greatest thing America has to offer. It seems many people agree – visitation has never been higher.</description>
+    </item>
+    
+    <item>
+      <title>Presidential clusters</title>
+      <link>/2017/04/03/presidential-clusters/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/03/presidential-clusters/</guid>
+      <description>C-Span recently released the results of their Presidential Historians Survey for 2017. Historians (n = 91) gave scores to each US president on multiple attributes deemed important to the presidency, which allowed the presidents to be ranked. The C-Span report allows you to sort through the data by attribute (spoiler alert: Lincoln was rated highest overall, and Buchanan lowest).
+There are potential difficulties with these rankings: perhaps the attributes measured are not the only/most relevant ones for a good president to display, and it’s also possible that different historians interpret each attribute differently.</description>
+    </item>
+    
+    <item>
+      <title>National battleground 2016</title>
+      <link>/2017/02/17/national-battleground-2016/</link>
+      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/02/17/national-battleground-2016/</guid>
+      <description>Election maps showing each state as a monolithic red or blue piece of the country aren’t very informative. Visualizing results by county reveals the voting patterns in some states to be pretty diverse – e.g., California’s coast went for Clinton while inland counties went for Trump; Texas starts to lean towards Clinton the further south you go; and most red states have at least one island of swing or blue-leaning counties.</description>
+    </item>
+    
+    <item>
+      <title>How wrong were the polls?</title>
+      <link>/2016/12/11/how-wrong-were-the-polls/</link>
+      <pubDate>Sun, 11 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/11/how-wrong-were-the-polls/</guid>
+      <description>Going into the 2016 Presidential Election, most pollsters were confident of a Clinton win. The aftermath of Trump’s win resulted in many questions being asked of pollsters and speculation as to how so many got it wrong. I won’t get into the reasons why; here are some articles with coverage on that. Instead, I want to focus on quantifying and visualizing the amount of error in the polls – where were they wrong, and how were they wrong?</description>
+    </item>
+    
+    <item>
+      <title>Predictably comforting: The writings of Soo Ewe Jin</title>
+      <link>/2016/11/22/predictably-comforting-the-writings-of-soo-ewe-jin/</link>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/11/22/predictably-comforting-the-writings-of-soo-ewe-jin/</guid>
+      <description>My father passed away on November 17, 2016. His life has been memorialized in countless tributes published in the Malaysian press and on social media. An executive editor at the most widely-read English daily in Malaysia, he had a popular weekly column: Sunday Starters.
+As a way of navigating the mourning process, I set out to collect all his writings published in The Star. I’m sure the editors would have given me all his writings if I had asked, but instead I wrote some code to scrape all 366 articles he authored from the website.</description>
+    </item>
+    
+  </channel>
+</rss>
