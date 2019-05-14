@@ -1,2 +1,2 @@
 # kevinsoo
-Kevin's academic page
+Landing page for website/blog. Formerly my academic page.
