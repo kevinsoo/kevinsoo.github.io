@@ -1,2 +1,4 @@
 # kevinsoo
-Landing page for website/blog. Formerly my academic page.
+Landing page for website / blog.
+
+`indexOld.html` contains my former academic page.
